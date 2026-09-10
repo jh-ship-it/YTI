@@ -1,0 +1,78 @@
+import { motion } from 'motion/react';
+import PageHero from '../components/PageHero';
+
+export default function Mission() {
+  return (
+    <div className="bg-background pb-24 sm:pb-32">
+      <PageHero 
+        label="Our Mission"
+        title="Closing the gap in trauma care."
+        subtitle="Youth Trauma Institute helps children around the world receive better trauma and PTSD care by expanding access to the tools, training, data, and research clinicians need."
+        imageUrl="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=1200"
+      />
+
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-12 sm:mt-16">
+        <div className="mx-auto max-w-3xl space-y-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-2xl font-bold tracking-tight text-primary font-display">Expanded Mission Statement</h2>
+            <p className="mt-6 text-lg leading-8 text-text-muted">
+              Youth Trauma Institute exists to expand clinical access globally to the evidence-based tools and supporting resources clinicians and child-serving systems need to properly identify, assess, diagnose, monitor, and treat trauma and post-traumatic stress disorder in children and adolescents.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="bg-white rounded-3xl p-8 sm:p-12 shadow-sm ring-1 ring-primary/5"
+          >
+            <h2 className="text-2xl font-bold tracking-tight text-primary font-display">The Gap in Care</h2>
+            <p className="mt-6 text-lg leading-8 text-text-muted">
+              Too many children experience trauma without timely, consistent access to the tools and systems needed to recognize PTSD, guide care, and measure whether treatment is helping. Youth Trauma Institute works to close that gap.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-2xl font-bold tracking-tight text-primary font-display">Our Approach</h2>
+            <p className="mt-6 text-lg leading-8 text-text-muted">
+              YTI is a mission-first, vendor-neutral nonprofit organization focused on improving childhood-trauma care worldwide. We work to support:
+            </p>
+            <ul className="mt-8 space-y-4 text-lg text-text-muted list-none">
+              {[
+                'Funding or subsidized access to evidence-based trauma screening, assessment, diagnostic-support, treatment-planning, monitoring, and outcomes tools.',
+                'Training and implementation support for clinicians and organizations.',
+                'Public education and awareness campaigns to improve recognition of childhood trauma.',
+                'Pilots, research, validation, translation, cultural adaptation, and program evaluation.',
+                'Measurement-based care initiatives for clinical and child-serving organizations.',
+                'Shared research data resources and responsible AI / machine-learning research to improve our understanding of trauma.'
+              ].map((item, index) => (
+                <motion.li 
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="flex gap-4 items-start"
+                >
+                  <div className="w-2 h-2 rounded-full bg-secondary mt-2.5 shrink-0"></div>
+                  <span>{item}</span>
+                </motion.li>
+              ))}
+            </ul>
+          </motion.div>
+        </div>
+      </div>
+    </div>
+  );
+}

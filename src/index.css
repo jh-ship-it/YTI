@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0F3B5B; /* Deep Blue */
+  --color-primary-light: #255d7d;
+  --color-secondary: #249D8F; /* Sage Teal */
+  --color-secondary-light: #8ab6b7;
+  --color-accent: #EAE6E1; /* Stone */
+  --color-background: #FFFFFF; /* Using white for standard background */
+  --color-sun: #E2B04F; /* Warm Sun */
+  --color-sky: #DCEBF7; /* Sky Mist */
+  --color-alpine: #4F8CA8; /* Alpine Blue */
+  --color-surface: #FFFFFF;
+  --color-text: #1E293B;
+  --color-text-muted: #475569;
+
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Lora', serif;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-text font-sans antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display text-primary;
+  }
+}
