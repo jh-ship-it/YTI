@@ -1,11 +1,10 @@
-import SEO from '../components/SEO';
-import { Database, Network, TrendingUp, ShieldAlert, ArrowRight } from 'lucide-react';
+with open("src/pages/DataInitiative.tsx", "w") as f:
+    f.write("""import { Database, Network, TrendingUp, ShieldAlert, ArrowRight } from 'lucide-react';
 import PageHero from '../components/PageHero';
 
 export default function DataInitiative() {
   return (
     <div className="bg-background pb-24 sm:pb-32">
-      <SEO title="Data Initiative" description="Data Initiative - The visual care pathway and shared learning" />
       <PageHero 
         label="Planned Initiative"
         title="Building the data infrastructure to heal."
@@ -133,3 +132,4 @@ export default function DataInitiative() {
     </div>
   );
 }
+""")

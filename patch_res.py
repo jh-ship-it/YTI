@@ -1,5 +1,5 @@
-import SEO from '../components/SEO';
-import { Link } from 'react-router-dom';
+with open("src/pages/Research.tsx", "w") as f:
+    f.write("""import { Link } from 'react-router-dom';
 import { ArrowRight, Microscope, BrainCircuit, LineChart, Users, CheckCircle2 } from 'lucide-react';
 import PageHero from '../components/PageHero';
 
@@ -45,7 +45,6 @@ export default function Research() {
 
   return (
     <div className="bg-background pb-24 sm:pb-32">
-      <SEO title="Research & Partnerships" description="Research & Partnerships - Building the evidence base" />
       <PageHero 
         label="Research & Partnerships"
         title="Building the evidence base together."
@@ -114,3 +113,4 @@ export default function Research() {
     </div>
   );
 }
+""")

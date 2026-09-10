@@ -1,17 +1,16 @@
-import SEO from '../components/SEO';
-import { Link } from 'react-router-dom';
+with open("src/pages/Clinicians.tsx", "w") as f:
+    f.write("""import { Link } from 'react-router-dom';
 import { ArrowRight, Building2, Stethoscope, CheckCircle2 } from 'lucide-react';
 import PageHero from '../components/PageHero';
 
 export default function Clinicians() {
   return (
     <div className="bg-background pb-24 sm:pb-32">
-      <SEO title="For Organizations" description="For Organizations - Clinical resources and capacity building" />
       <PageHero 
         label="For Organizations"
         title="Bring stronger assessment to your clinical setting."
         subtitle="YTI aims to work with eligible organizations facing financial, implementation, language, geographic, technology, or capacity barriers to measurement-based care."
-        imageUrl="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=1200"
+        imageUrl="https://images.unsplash.com/photo-1551076805-e18690c5e561?auto=format&fit=crop&q=80&w=1200"
       />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-12 sm:mt-16">
@@ -112,3 +111,4 @@ export default function Clinicians() {
     </div>
   );
 }
+""")

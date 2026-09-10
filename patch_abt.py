@@ -1,10 +1,9 @@
-import SEO from '../components/SEO';
-import PageHero from '../components/PageHero';
+with open("src/pages/About.tsx", "w") as f:
+    f.write("""import PageHero from '../components/PageHero';
 
 export default function About() {
   return (
     <div className="bg-background pb-24 sm:pb-32">
-      <SEO title="About" description="About - Bridging the gap between evidence and access" />
       <PageHero 
         label="About Youth Trauma Institute"
         title="Built to close the gap between evidence and access."
@@ -50,3 +49,4 @@ export default function About() {
     </div>
   );
 }
+""")

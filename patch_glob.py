@@ -1,17 +1,16 @@
-import SEO from '../components/SEO';
-import { Link } from 'react-router-dom';
+with open("src/pages/GlobalAccess.tsx", "w") as f:
+    f.write("""import { Link } from 'react-router-dom';
 import { ArrowRight, Globe, ShieldCheck } from 'lucide-react';
 import PageHero from '../components/PageHero';
 
 export default function GlobalAccess() {
   return (
     <div className="bg-background pb-24 sm:pb-32">
-      <SEO title="Global Access" description="Global Access - Care shouldn't stop at a border" />
       <PageHero 
         label="Global Access"
         title="Science doesn't stop at borders."
         subtitle="Youth Trauma Institute's mission is global. We work to reduce financial, geographic, language, technology, and capacity barriers to evidence-based childhood trauma care."
-        imageUrl="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1200"
+        imageUrl="https://images.unsplash.com/photo-1526778548025-fa2fbf8b1bb3?auto=format&fit=crop&q=80&w=1200"
       />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-12 sm:mt-16">
@@ -84,3 +83,4 @@ export default function GlobalAccess() {
     </div>
   );
 }
+""")

@@ -1,17 +1,16 @@
-import SEO from '../components/SEO';
-import { Link } from 'react-router-dom';
+with open("src/pages/Programs.tsx", "w") as f:
+    f.write("""import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 import { ArrowRight } from 'lucide-react';
 
 export default function Programs() {
   return (
     <div className="bg-background pb-24 sm:pb-32">
-      <SEO title="Our Work" description="Our Work - Core programs and initiatives" />
       <PageHero 
         label="Our Work"
         title="Expanding access and improving care globally."
         subtitle="Youth Trauma Institute operates four core program areas to bridge the gap between clinical science and real-world application."
-        imageUrl="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=1200"
+        imageUrl="https://images.unsplash.com/photo-1551076805-e18690c5e561?auto=format&fit=crop&q=80&w=1200"
       />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-12 sm:mt-16 space-y-24">
@@ -183,3 +182,4 @@ export default function Programs() {
     </div>
   );
 }
+""")

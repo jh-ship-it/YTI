@@ -1,12 +1,11 @@
-import SEO from '../components/SEO';
-import { Link } from 'react-router-dom';
+with open("src/pages/GetInvolved.tsx", "w") as f:
+    f.write("""import { Link } from 'react-router-dom';
 import { ArrowRight, HeartHandshake, Lightbulb, Landmark, UserPlus } from 'lucide-react';
 import PageHero from '../components/PageHero';
 
 export default function GetInvolved() {
   return (
     <div className="bg-background pb-24 sm:pb-32">
-      <SEO title="Get Involved" description="Get Involved - Philanthropy and institutional partnerships" />
       <PageHero 
         label="Get Involved"
         title="Help put better trauma care within reach."
@@ -96,3 +95,4 @@ export default function GetInvolved() {
     </div>
   );
 }
+""")

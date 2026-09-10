@@ -1,5 +1,5 @@
-import SEO from '../components/SEO';
-import { FormEvent, useState } from 'react';
+with open("src/pages/Contact.tsx", "w") as f:
+    f.write("""import { FormEvent, useState } from 'react';
 import { Mail, ShieldAlert } from 'lucide-react';
 import PageHero from '../components/PageHero';
 
@@ -15,7 +15,6 @@ export default function Contact() {
 
   return (
     <div className="bg-background pb-24 sm:pb-32">
-      <SEO title="Contact" description="Contact - Connect with our team" />
       <PageHero 
         label="Contact Us"
         title="Connect with Youth Trauma Institute."
@@ -180,3 +179,4 @@ export default function Contact() {
     </div>
   );
 }
+""")
