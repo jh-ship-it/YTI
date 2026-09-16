@@ -2,45 +2,88 @@ export default function PageHero({
   title, 
   subtitle, 
   imageUrl,
-  label
+  label,
+  layout = "split"
 }: { 
   title: string; 
   subtitle?: string; 
   imageUrl?: string;
   label?: string;
+  layout?: "split" | "centered-image" | "text-only";
 }) {
-  return (
-    <section className="bg-background pt-16 pb-12 sm:pt-24 sm:pb-16 overflow-hidden">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className={`mx-auto ${imageUrl ? 'grid lg:grid-cols-2 gap-12 items-center' : 'max-w-3xl text-center'}`}>
-          <div>
+  if (layout === "text-only" || !imageUrl) {
+    return (
+      <section className="bg-background pt-16 pb-12 sm:pt-24 sm:pb-16 overflow-hidden">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
+          <div className="max-w-3xl mx-auto">
             {label && (
-              <p
-                className="text-sm font-bold tracking-widest text-secondary uppercase mb-4"
-              >
+              <p className="text-sm font-bold tracking-widest text-secondary uppercase mb-4">
                 {label}
               </p>
             )}
-            <h1
-              className="text-4xl font-bold tracking-tight text-primary sm:text-5xl font-display"
-            >
+            <h1 className="text-4xl font-bold tracking-tight text-primary sm:text-5xl font-display">
               {title}
             </h1>
             {subtitle && (
-              <p
-                className="mt-6 text-xl leading-8 text-text-muted"
-              >
+              <p className="mt-6 text-xl leading-8 text-text-muted">
                 {subtitle}
               </p>
             )}
           </div>
-          {imageUrl && (
-            <div
-              className="relative h-64 sm:h-80 lg:h-96 w-full rounded-3xl overflow-hidden shadow-xl ring-1 ring-primary/5"
-            >
-              <img src={imageUrl} alt="" className="absolute inset-0 w-full h-full object-cover" />
-            </div>
-          )}
+        </div>
+      </section>
+    );
+  }
+
+  if (layout === "centered-image") {
+    return (
+      <section className="bg-background pt-16 pb-12 sm:pt-24 overflow-hidden">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
+          <div className="max-w-3xl mx-auto mb-12">
+            {label && (
+              <p className="text-sm font-bold tracking-widest text-secondary uppercase mb-4">
+                {label}
+              </p>
+            )}
+            <h1 className="text-4xl font-bold tracking-tight text-primary sm:text-5xl font-display">
+              {title}
+            </h1>
+            {subtitle && (
+              <p className="mt-6 text-xl leading-8 text-text-muted">
+                {subtitle}
+              </p>
+            )}
+          </div>
+          <div className="relative h-64 sm:h-96 lg:h-[500px] w-full rounded-3xl overflow-hidden shadow-2xl ring-1 ring-primary/5">
+            <img src={imageUrl} alt="" className="absolute inset-0 h-full w-full object-cover" />
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  return (
+    <section className="bg-background pt-16 pb-12 sm:pt-24 sm:pb-16 overflow-hidden">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-12 items-center mx-auto">
+          <div>
+            {label && (
+              <p className="text-sm font-bold tracking-widest text-secondary uppercase mb-4">
+                {label}
+              </p>
+            )}
+            <h1 className="text-4xl font-bold tracking-tight text-primary sm:text-5xl font-display">
+              {title}
+            </h1>
+            {subtitle && (
+              <p className="mt-6 text-xl leading-8 text-text-muted">
+                {subtitle}
+              </p>
+            )}
+          </div>
+          <div className="relative h-64 sm:h-80 lg:h-96 w-full rounded-3xl overflow-hidden shadow-xl ring-1 ring-primary/5">
+            <img src={imageUrl} alt="" className="absolute inset-0 h-full w-full object-cover" />
+          </div>
         </div>
       </div>
     </section>

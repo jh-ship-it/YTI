@@ -6,11 +6,11 @@ import PageHero from '../components/PageHero';
 export default function GetInvolved() {
   return (
     <div className="bg-background pb-24 sm:pb-32">
-      <SEO title="Get Involved" description="Get Involved - Philanthropy and institutional partnerships" />
+      <SEO title="Support YTI" description="Support Youth Trauma Initiative through philanthropy or institutional partnerships to help expand access to evidence-based pediatric trauma care globally." />
       <PageHero 
         label="Get Involved"
         title="Help put better trauma care within reach."
-        subtitle="Funding for Youth Trauma Institute can help expand access to evidence-based clinical resources, strengthen measurement-based care, support research, and bring proven approaches to communities."
+        subtitle="Funding for Youth Trauma Initiative can help expand access to evidence-based clinical resources, strengthen measurement-based care, support research, and bring proven approaches to communities."
         imageUrl="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&q=80&w=1200"
       />
 
@@ -45,10 +45,10 @@ export default function GetInvolved() {
                   Every contribution helps expand clinical access and awareness. Join our community of supporters committed to better care for children.
                 </p>
                 <div className="text-sm font-medium text-secondary bg-secondary/10 p-4 border border-secondary/20 mb-8">
-                  Direct donation processing is coming soon as we finalize our tax-exempt status. Please contact us to express early interest.
+                  Direct donation processing is now available. Your contribution directly supports our mission to expand pediatric trauma care globally.
                 </div>
-                <Link to="/contact" className="inline-flex items-center gap-2 text-sm font-bold tracking-wide text-primary hover:text-secondary uppercase transition-colors group">
-                  Express Interest <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <Link to="/donate" className="inline-flex items-center gap-2 text-sm font-bold tracking-wide text-primary hover:text-secondary uppercase transition-colors group">
+                  Make a Donation <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
             </div>

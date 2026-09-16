@@ -2,24 +2,10 @@ import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Globe2, BookOpen, Activity, Users2, Database, ShieldCheck, Heart, Users, LineChart } from 'lucide-react';
 export default function Home() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  };
-
+  
   return (
     <div className="flex flex-col">
-      <SEO title="Better tools, data, and trauma care for children" description="Better tools, data, and trauma care for children" />
+      <SEO title="Better tools, data, and trauma care for children" description="Youth Trauma Initiative works to expand global access to evidence-based tools, training, data, research, and implementation support for childhood trauma and PTSD care." />
       {/* Hero Section */}
       <section className="relative bg-background pt-24 pb-12 sm:pt-32 sm:pb-24 lg:pb-32 overflow-hidden flex flex-col justify-center min-h-[85vh]">
         {/* Right side image background */}
@@ -46,7 +32,7 @@ export default function Home() {
               </h1>
               
               <p className="mt-6 text-lg sm:text-xl leading-relaxed text-text-muted max-w-md">
-                Youth Trauma Institute expands access to the clinical tools, training, research, and data clinicians need to identify and treat childhood trauma and PTSD.
+                Youth Trauma Initiative helps children around the world receive better trauma and PTSD care by expanding access to the tools, training, data, research, and implementation support clinicians and child-serving systems need.
               </p>
               
               <div className="mt-10 flex flex-wrap items-center gap-4">
@@ -134,37 +120,23 @@ export default function Home() {
               The science exists. Access is uneven.
             </p>
             <p className="text-lg sm:text-xl leading-relaxed text-gray-300">
-              Recognizing trauma is only the beginning. Clinicians and child-serving systems need appropriate tools to assess symptoms, guide treatment, monitor progress, and understand outcomes. Yet cost, language, geography, and fragmented systems put those resources out of reach. <span className="font-semibold text-white">YTI exists to help close that gap.</span>
+              Recognizing trauma is only the beginning. Clinicians and child-serving systems need appropriate tools to assess symptoms, guide treatment, monitor progress, and understand outcomes. Yet cost, language, geography, workforce limitations, and fragmented systems can put those resources out of reach. <span className="font-semibold text-white">YTI exists to help close that gap.</span>
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-3 gap-8 pt-12 border-t border-white/10">
-            <div>
-              <div className="text-4xl font-display font-bold text-sun mb-2">2/3</div>
-              <p className="text-sm text-gray-300 leading-relaxed">
-                of children report at least one traumatic event by age 16. Early identification is critical to preventing long-term outcomes.
-                <span className="block text-xs mt-2 text-white/50">(SAMHSA)</span>
-              </p>
-            </div>
-            <div>
-              <div className="text-4xl font-display font-bold text-sun mb-2">40%</div>
-              <p className="text-sm text-gray-300 leading-relaxed">
-                of youth do not receive adequate follow-up care or measurement-based tracking during trauma treatment.
-                <span className="block text-xs mt-2 text-white/50">(NCTSN)</span>
-              </p>
-            </div>
-            <div>
-              <div className="text-4xl font-display font-bold text-sun mb-2">90+</div>
-              <p className="text-sm text-gray-300 leading-relaxed">
-                countries face severe shortages of validated, translated pediatric trauma assessment instruments.
-                <span className="block text-xs mt-2 text-white/50">(Global Health Estimates)</span>
+          <div className="flex justify-center pt-12 border-t border-white/10">
+            <div className="max-w-2xl text-center">
+              <div className="text-5xl font-display font-bold text-sun mb-4">2/3</div>
+              <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
+                of children report at least one traumatic event by age 16. Childhood trauma can have lasting effects on health, learning, and wellbeing—making appropriate identification and support important.
+                <span className="block text-sm mt-3 text-white/50 font-medium">Source: Substance Abuse and Mental Health Services Administration (SAMHSA)</span>
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Data Initiative Feature */}
+            {/* Data Initiative Feature */}
       <section className="py-24 sm:py-32 bg-white px-6 lg:px-8 relative overflow-hidden">
         <div className="mx-auto max-w-7xl relative z-10 border-t border-primary/10 pt-16">
           <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:gap-x-16 items-center">
@@ -174,7 +146,7 @@ export default function Home() {
                 From individual assessments to shared learning.
               </h2>
               <p className="mt-6 text-lg leading-8 text-text-muted">
-                The Youth Trauma Data Initiative is being developed to help organizations use repeated clinical measurement and outcomes data to better understand trauma treatment and recovery.
+                The YTI Data Initiative is being developed to help organizations use repeated clinical measurement and outcomes data to better understand trauma treatment and recovery.
               </p>
               <p className="mt-4 text-lg leading-8 text-text-muted">
                 Over time, responsibly governed multi-site research data and advanced analytics may help researchers identify risk patterns, understand treatment response, study symptom trajectories, and improve the evidence available to clinicians.
@@ -188,33 +160,43 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-
-            <div className="bg-background border-l-4 border-primary p-8 sm:p-12 h-full">
-              <div className="flex flex-col gap-6">
-                 {/* Process Flow */}
-                 <div className="flex items-center gap-4 text-primary font-medium">
-                    <div className="w-10 h-10 border-2 border-primary/20 flex items-center justify-center shrink-0 rounded-full font-bold">1</div>
-                    <span>Screen & Assess</span>
+            
+            <div className="bg-background border border-primary/10 p-8 sm:p-10 h-full">
+              <h3 className="text-sm font-bold text-primary uppercase tracking-widest mb-6">Clinical Measurement Flow</h3>
+              <div className="flex flex-wrap items-center gap-2 text-sm font-bold text-primary mb-12">
+                <span className="bg-white px-3 py-1.5 border border-primary/20">Screen</span>
+                <ArrowRight className="w-4 h-4 text-secondary" />
+                <span className="bg-white px-3 py-1.5 border border-primary/20">Assess</span>
+                <ArrowRight className="w-4 h-4 text-secondary" />
+                <span className="bg-white px-3 py-1.5 border border-primary/20">Treat</span>
+                <ArrowRight className="w-4 h-4 text-secondary" />
+                <span className="bg-white px-3 py-1.5 border border-primary/20">Re-measure</span>
+                <ArrowRight className="w-4 h-4 text-secondary" />
+                <span className="bg-white px-3 py-1.5 border border-primary/20">Analyze Outcomes</span>
+                <ArrowRight className="w-4 h-4 text-secondary" />
+                <span className="bg-secondary/10 px-3 py-1.5 border border-secondary text-secondary">Inform Better Care</span>
+              </div>
+              
+              <h3 className="text-sm font-bold text-primary uppercase tracking-widest mb-6 border-t border-primary/10 pt-8">Research & Analytics Flow</h3>
+              <div className="flex flex-col gap-4">
+                 <div className="flex items-center gap-4 bg-white p-4 border border-primary/10">
+                    <Database className="w-5 h-5 text-secondary shrink-0" />
+                    <span className="font-semibold text-primary text-sm">Participating Sites</span>
                  </div>
-                 <div className="w-px h-6 bg-primary/20 ml-5"></div>
-                 
-                 <div className="flex items-center gap-4 text-primary font-medium">
-                    <div className="w-10 h-10 border-2 border-primary/20 flex items-center justify-center shrink-0 rounded-full font-bold">2</div>
-                    <span>Treat & Re-measure</span>
+                 <div className="w-px h-4 bg-primary/20 ml-6"></div>
+                 <div className="flex items-center gap-4 bg-white p-4 border border-primary/10">
+                    <ShieldCheck className="w-5 h-5 text-secondary shrink-0" />
+                    <span className="font-semibold text-primary text-sm">Governed Shared Research Data</span>
                  </div>
-                 <div className="w-px h-6 bg-primary/20 ml-5"></div>
-                 
-                 <div className="flex items-center gap-4 text-primary font-medium">
-                    <div className="w-10 h-10 border-2 border-primary/20 flex items-center justify-center shrink-0 rounded-full font-bold">3</div>
-                    <span>Analyze Outcomes</span>
+                 <div className="w-px h-4 bg-primary/20 ml-6"></div>
+                 <div className="flex items-center gap-4 bg-white p-4 border border-primary/10">
+                    <LineChart className="w-5 h-5 text-secondary shrink-0" />
+                    <span className="font-semibold text-primary text-sm">Statistical / AI Analysis</span>
                  </div>
-                 <div className="w-px h-6 bg-primary/20 ml-5"></div>
-                 
-                 <div className="flex items-center gap-4 text-secondary font-semibold">
-                    <div className="w-10 h-10 bg-secondary text-white flex items-center justify-center shrink-0 rounded-full">
-                      <Database className="w-5 h-5" />
-                    </div>
-                    <span>Improve Care Globally</span>
+                 <div className="w-px h-4 bg-primary/20 ml-6"></div>
+                 <div className="flex items-center gap-4 bg-primary p-4 border border-primary">
+                    <BookOpen className="w-5 h-5 text-sun shrink-0" />
+                    <span className="font-semibold text-white text-sm">Research Findings</span>
                  </div>
               </div>
             </div>
@@ -224,51 +206,98 @@ export default function Home() {
       {/* Funding Flow Explainer */}
       <section className="py-24 sm:py-32 bg-white px-6 lg:px-8 border-t border-accent">
         <div className="mx-auto max-w-7xl text-center">
-          <div
-          >
+          <div>
             <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl font-display">
               Your support becomes clinical capacity.
             </h2>
             <p className="mt-6 text-lg leading-8 text-text-muted max-w-2xl mx-auto">
-              Funders support Youth Trauma Institute. YTI then independently directs resources toward programs that expand clinical access, research, education, implementation, training, and global capacity.
+              Funders support Youth Trauma Initiative. YTI then independently directs resources toward programs that expand clinical access, research, education, implementation, training, and global capacity.
             </p>
           </div>
           
-          <div
-            className="mt-16 bg-background rounded-3xl p-8 sm:p-12 ring-1 ring-primary/10 max-w-4xl mx-auto relative overflow-hidden shadow-sm"
-          >
-            <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
-              <div className="bg-white p-6 rounded-2xl shadow-md shadow-primary/5 text-center flex-1 w-full border border-primary/5">
-                <Users2 className="w-8 h-8 text-secondary mx-auto mb-4" />
-                <h4 className="font-semibold text-primary">Funders</h4>
-                <p className="text-xs text-text-muted mt-2">Foundations, Government, Companies, Individuals</p>
+          <div className="mt-16 max-w-5xl mx-auto flex flex-col items-center">
+            
+            {/* 1. Funders */}
+            <div className="bg-accent/40 border border-primary/20 px-8 py-4 w-full max-w-3xl">
+              <p className="text-sm font-bold text-primary uppercase tracking-wider">
+                Foundations / Government / Corporate Philanthropy / Individuals
+              </p>
+            </div>
+            
+            {/* Arrow down */}
+            <div className="h-8 w-px bg-primary/30"></div>
+            <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-primary/30"></div>
+            
+            {/* 2. YTI */}
+            <div className="bg-primary text-white p-8 w-full max-w-3xl relative mt-2 border-b-4 border-secondary">
+              <div className="font-display font-bold text-3xl mb-1">Youth Trauma Initiative</div>
+              <div className="text-sm font-medium text-gray-300 italic">"Independent charitable control"</div>
+            </div>
+            
+            {/* Arrow down */}
+            <div className="h-8 w-px bg-primary/30 mt-0"></div>
+            
+            {/* 3. Four Branches */}
+            <div className="w-full max-w-4xl border-t border-primary/30 relative">
+               <div className="flex justify-between w-full relative -top-3">
+                 <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-primary/30 mx-auto"></div>
+                 <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-primary/30 mx-auto"></div>
+                 <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-primary/30 mx-auto hidden md:block"></div>
+                 <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-primary/30 mx-auto hidden md:block"></div>
+               </div>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-4xl mt-4">
+              <div className="bg-white border border-primary/10 p-6 flex flex-col justify-center shadow-sm">
+                <p className="text-sm font-bold text-primary leading-snug">Clinical Access &<br/>Implementation</p>
               </div>
-              
-              <ArrowRight className="w-6 h-6 text-primary/30 hidden md:block shrink-0" />
-              
-              <div className="bg-primary p-6 rounded-2xl shadow-lg shadow-primary/20 text-center flex-1 w-full transform hover:scale-105 transition-transform duration-300">
-                <div className="text-white font-display font-bold text-2xl mb-2">YTI</div>
-                <p className="text-xs text-gray-300">Independent charitable control</p>
+              <div className="bg-white border border-primary/10 p-6 flex flex-col justify-center shadow-sm">
+                <p className="text-sm font-bold text-primary leading-snug">Education &<br/>Awareness</p>
               </div>
-              
-              <ArrowRight className="w-6 h-6 text-primary/30 hidden md:block shrink-0" />
-              
-              <div className="bg-white p-6 rounded-2xl shadow-md shadow-primary/5 text-center flex-1 w-full border border-primary/5">
-                <ShieldCheck className="w-8 h-8 text-secondary mx-auto mb-4" />
-                <h4 className="font-semibold text-primary">Programs & Partners</h4>
-                <p className="text-xs text-text-muted mt-2">Clinicians, Schools, Hospitals, Universities</p>
+              <div className="bg-white border border-primary/10 p-6 flex flex-col justify-center shadow-sm">
+                <p className="text-sm font-bold text-primary leading-snug">Research, Data &<br/>Outcomes</p>
+              </div>
+              <div className="bg-white border border-primary/10 p-6 flex flex-col justify-center shadow-sm">
+                <p className="text-sm font-bold text-primary leading-snug">Global Capacity<br/>Building</p>
               </div>
             </div>
             
-            <div className="mt-12 pt-8 border-t border-primary/10 relative z-10">
-              <h3 className="text-xl font-bold text-primary font-display">
-                Earlier identification • Better measurement • Better-informed care
-              </h3>
+            {/* Arrow down */}
+            <div className="h-8 w-px bg-primary/30 mt-6"></div>
+            <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-primary/30"></div>
+            
+            {/* 4. Recipients */}
+            <div className="w-full max-w-4xl mt-2 p-6 bg-accent/20 border border-primary/10">
+              <p className="text-sm font-bold text-text-muted uppercase tracking-widest mb-4">Supported Partners & Recipients</p>
+              <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-primary font-medium text-sm">
+                <span>Clinicians</span> •
+                <span>Schools</span> •
+                <span>Hospitals</span> •
+                <span>Nonprofits</span> •
+                <span>CACs</span> •
+                <span>Universities</span> •
+                <span>Public Agencies</span> •
+                <span>International Partners</span>
+              </div>
             </div>
+            
+            {/* Arrow down */}
+            <div className="h-8 w-px bg-primary/30 mt-6"></div>
+            <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-primary/30"></div>
+            
+            {/* 5. Outcomes */}
+            <div className="w-full max-w-3xl mt-2 bg-secondary/10 border border-secondary/20 p-6">
+              <p className="text-lg font-display font-bold text-primary flex flex-col md:flex-row items-center justify-center gap-4">
+                <span>Earlier identification</span>
+                <span className="hidden md:inline text-secondary">•</span>
+                <span>Better measurement</span>
+                <span className="hidden md:inline text-secondary">•</span>
+                <span>Better-informed care</span>
+              </p>
+            </div>
+            
           </div>
         </div>
       </section>
-
       {/* Closing CTA */}
       <section className="py-24 sm:py-32 bg-primary px-6 lg:px-8 text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center opacity-10 mix-blend-screen"></div>

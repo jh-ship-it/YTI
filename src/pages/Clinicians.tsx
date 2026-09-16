@@ -6,12 +6,12 @@ import PageHero from '../components/PageHero';
 export default function Clinicians() {
   return (
     <div className="bg-background pb-24 sm:pb-32">
-      <SEO title="For Organizations" description="For Organizations - Clinical resources and capacity building" />
+      <SEO title="For Organizations" description="Discover how your clinical setting, school, or NGO can partner with Youth Trauma Initiative to strengthen trauma assessment and measurement-based care." />
       <PageHero 
         label="For Organizations"
-        title="Bring stronger assessment to your clinical setting."
+        title="Strengthen trauma assessment and measurement-based care."
         subtitle="YTI aims to work with eligible organizations facing financial, implementation, language, geographic, technology, or capacity barriers to measurement-based care."
-        imageUrl="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=1200"
+        layout="text-only"
       />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-12 sm:mt-16">
@@ -64,36 +64,55 @@ export default function Clinicians() {
             </div>
           </section>
 
-          <section className="bg-white p-8 sm:p-12 border-l-4 border-secondary shadow-sm">
+                    <section className="bg-white p-8 sm:p-12 border border-primary/10 shadow-sm">
             <h2 className="text-2xl font-bold tracking-tight text-primary font-display mb-6">Eligibility Self-Screen</h2>
-            <p className="text-lg text-text-muted mb-8 leading-relaxed">
-              YTI partners with organizations providing direct services to children and adolescents. You may be eligible for support if your organization meets the following criteria:
-            </p>
-            <ul className="space-y-6 text-text-muted">
-              <li className="flex items-start gap-4">
-                 <div className="w-6 h-6 rounded-full bg-accent text-primary flex items-center justify-center font-bold text-sm shrink-0 mt-1">1</div>
-                 <div>
-                    <strong className="text-primary block mb-1">Organizational Type</strong>
-                    <p className="text-sm leading-relaxed">Public, charter, or private school; nonprofit behavioral-health provider; hospital or health system; government agency; child advocacy center; or qualified international NGO.</p>
-                 </div>
-              </li>
-              <li className="flex items-start gap-4">
-                 <div className="w-6 h-6 rounded-full bg-accent text-primary flex items-center justify-center font-bold text-sm shrink-0 mt-1">2</div>
-                 <div>
-                    <strong className="text-primary block mb-1">Demonstrated Need</strong>
-                    <p className="text-sm leading-relaxed">Facing significant financial, implementation, language, or geographic barriers to accessing proprietary or evidence-based clinical tools.</p>
-                 </div>
-              </li>
-              <li className="flex items-start gap-4">
-                 <div className="w-6 h-6 rounded-full bg-accent text-primary flex items-center justify-center font-bold text-sm shrink-0 mt-1">3</div>
-                 <div>
-                    <strong className="text-primary block mb-1">Target Population</strong>
-                    <p className="text-sm leading-relaxed">Serving underserved children, low-income or rural communities, high-trauma populations, or locations with limited trauma-specialty resources.</p>
-                 </div>
-              </li>
-            </ul>
-          </section>
+            
+            <div className="grid sm:grid-cols-2 gap-10">
+              <div>
+                <h3 className="font-bold text-primary text-lg mb-4">You may be a fit if:</h3>
+                <ul className="space-y-4 text-text-muted">
+                  <li className="flex gap-3 items-start">
+                    <CheckCircle2 className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
+                    <span className="text-sm">you serve children or adolescents;</span>
+                  </li>
+                  <li className="flex gap-3 items-start">
+                    <CheckCircle2 className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
+                    <span className="text-sm">you provide trauma-related clinical, research, educational, or public services;</span>
+                  </li>
+                  <li className="flex gap-3 items-start">
+                    <CheckCircle2 className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
+                    <span className="text-sm">you face an access or implementation barrier;</span>
+                  </li>
+                  <li className="flex gap-3 items-start">
+                    <CheckCircle2 className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
+                    <span className="text-sm">you can use and monitor supported resources responsibly.</span>
+                  </li>
+                </ul>
+              </div>
 
+              <div>
+                <h3 className="font-bold text-primary text-lg mb-4">Priority may be given to:</h3>
+                <ul className="space-y-4 text-text-muted">
+                  <li className="flex gap-3 items-start">
+                    <div className="w-1.5 h-1.5 rounded-full bg-secondary mt-2 shrink-0"></div>
+                    <span className="text-sm">underserved settings,</span>
+                  </li>
+                  <li className="flex gap-3 items-start">
+                    <div className="w-1.5 h-1.5 rounded-full bg-secondary mt-2 shrink-0"></div>
+                    <span className="text-sm">high-trauma populations,</span>
+                  </li>
+                  <li className="flex gap-3 items-start">
+                    <div className="w-1.5 h-1.5 rounded-full bg-secondary mt-2 shrink-0"></div>
+                    <span className="text-sm">programs with durable implementation potential,</span>
+                  </li>
+                  <li className="flex gap-3 items-start">
+                    <div className="w-1.5 h-1.5 rounded-full bg-secondary mt-2 shrink-0"></div>
+                    <span className="text-sm">organizations able to contribute to learning and outcomes measurement.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
           <section className="bg-primary text-white p-12 md:p-16 text-center border-t border-primary-light/30">
             <h2 className="text-3xl font-bold font-display mb-4">Tell us about your organization</h2>
             <p className="text-gray-300 mb-8 max-w-xl mx-auto text-lg">
@@ -103,7 +122,7 @@ export default function Clinicians() {
               to="/contact"
               className="inline-flex items-center gap-2 bg-secondary px-8 py-3.5 text-sm font-bold tracking-wide text-white hover:bg-secondary-light transition-colors uppercase"
             >
-              Contact Us <ArrowRight className="w-4 h-4" />
+              Tell us about your organization <ArrowRight className="w-4 h-4" />
             </Link>
           </section>
 

@@ -6,12 +6,12 @@ import { ArrowRight } from 'lucide-react';
 export default function Programs() {
   return (
     <div className="bg-background pb-24 sm:pb-32">
-      <SEO title="Our Work" description="Our Work - Core programs and initiatives" />
+      <SEO title="Our Work" description="Explore YTI's four core program areas: Clinical Capacity, Global Access, The Data Initiative, and Research, all designed to improve pediatric trauma care." />
       <PageHero 
         label="Our Work"
         title="Expanding access and improving care globally."
-        subtitle="Youth Trauma Institute operates four core program areas to bridge the gap between clinical science and real-world application."
-        imageUrl="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=1200"
+        subtitle="YTI's work is organized around four core areas to bridge the gap between clinical science and real-world application."
+        imageUrl="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=1200" layout="text-only"
       />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-12 sm:mt-16 space-y-24">
@@ -51,7 +51,7 @@ export default function Programs() {
              <div className="text-center space-y-4 max-w-sm">
                 <div className="w-16 h-1 bg-secondary mx-auto mb-8"></div>
                 <h3 className="font-display text-2xl text-primary font-bold">Scaling Care</h3>
-                <p className="text-text-muted">By subsidizing access to proprietary and hard-to-access tools, we equip front-line providers with the clinical scaffolding they need.</p>
+                <p className="text-text-muted">By subsidizing access to proprietary and hard-to-access tools, we equip front-line providers with the tools and implementation support they need.</p>
              </div>
           </div>
         </section>
@@ -70,7 +70,7 @@ export default function Programs() {
             <h2 className="text-3xl font-bold text-primary font-display mb-4">Public Education & Awareness</h2>
             <p className="text-xl font-semibold text-primary mb-6">Help communities recognize trauma earlier.</p>
             <p className="text-lg text-text-muted leading-relaxed mb-8">
-              YTI conducts and funds public education and awareness intended to improve recognition of childhood trauma, increase understanding of trauma-informed care, and encourage appropriate screening.
+              YTI plans to conduct and fund public education and awareness intended to improve recognition of childhood trauma, increase understanding of trauma-informed care, and encourage appropriate screening.
             </p>
             <ul className="space-y-4 mb-10 text-text-muted">
               <li className="flex gap-4 border-b border-primary/10 pb-4">
@@ -131,7 +131,7 @@ export default function Programs() {
              <div className="space-y-6">
                 <h3 className="font-display text-2xl text-primary font-bold">The Data Initiative</h3>
                 <p className="text-text-muted">
-                  Our flagship project aims to build the infrastructure necessary to aggregate and study multi-site trauma outcomes securely.
+                  A major planned initiative aims to build the infrastructure necessary to aggregate and study multi-site trauma outcomes securely.
                 </p>
                 <div className="w-full h-px bg-primary/20"></div>
                 <p className="text-sm font-bold text-primary uppercase tracking-widest">Status: Planned</p>
@@ -153,7 +153,7 @@ export default function Programs() {
             <h2 className="text-3xl font-bold text-primary font-display mb-4">Global Capacity Building</h2>
             <p className="text-xl font-semibold text-primary mb-6">Expand trauma-care capacity where resources are limited.</p>
             <p className="text-lg text-text-muted leading-relaxed mb-8">
-              YTI works in the United States and internationally, giving priority to settings where barriers include cost, geography, language, and limited specialized workforce.
+              YTI plans to work in the United States and internationally, giving priority to settings where barriers include cost, geography, language, and limited specialized workforce.
             </p>
             <ul className="space-y-4 mb-10 text-text-muted">
               <li className="flex gap-4 border-b border-primary/10 pb-4">

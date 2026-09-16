@@ -6,12 +6,12 @@ import PageHero from '../components/PageHero';
 export default function GlobalAccess() {
   return (
     <div className="bg-background pb-24 sm:pb-32">
-      <SEO title="Global Access" description="Global Access - Care shouldn't stop at a border" />
+      <SEO title="Global Access" description="YTI works to make validated trauma-care resources more accessible and usable across diverse settings, overcoming cost, language, and licensing barriers." />
       <PageHero 
         label="Global Access"
-        title="Science doesn't stop at borders."
-        subtitle="Youth Trauma Institute's mission is global. We work to reduce financial, geographic, language, technology, and capacity barriers to evidence-based childhood trauma care."
-        imageUrl="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1200"
+        title="Evidence-based trauma care should not stop at a border."
+        subtitle="The mission of YTI is global. We work to reduce financial, geographic, language, technology, and capacity barriers to evidence-based childhood trauma care."
+        layout="text-only"
       />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-12 sm:mt-16">
@@ -24,10 +24,10 @@ export default function GlobalAccess() {
                 Evidence-based care for pediatric trauma should be a universal standard, not a geographic privilege.
               </p>
               <p className="text-lg text-text-muted leading-relaxed">
-                The majority of the world's traumatized children reside in low- and middle-income settings, yet the vast majority of validated clinical instruments, measurement frameworks, and specialized training materials are locked behind paywalls, English-language barriers, or complex licensing agreements designed for Western academic institutions.
+                In many settings, cost, language, licensing, workforce, implementation, and infrastructure barriers can limit access to validated trauma resources.
               </p>
               <p className="text-lg text-text-muted leading-relaxed">
-                YTI exists to democratize these tools. We partner directly with local organizations, health ministries, and humanitarian responders to subsidize access, support accurate cultural translation, and build localized clinical capacity.
+                YTI works to make evidence-based trauma resources more accessible, affordable, and usable across diverse settings. YTI intends to work with local organizations, health ministries, and humanitarian responders to subsidize access, support accurate cultural translation, and build localized clinical capacity.
               </p>
             </div>
           </section>
@@ -40,7 +40,7 @@ export default function GlobalAccess() {
               </div>
               
               <p className="text-text-muted leading-relaxed mb-10 text-lg">
-                YTI develops international programs with qualified local partners, ensuring strict adherence to local clinical law, ethics, research requirements, privacy, child safeguarding, and cultural context.
+                International programs are conducted in close collaboration with qualified local partners, ensuring strict adherence to local clinical regulations, medical ethics, patient privacy, child safeguarding standards, and cultural contexts.
               </p>
               
               <div className="grid sm:grid-cols-2 gap-x-8 gap-y-10">

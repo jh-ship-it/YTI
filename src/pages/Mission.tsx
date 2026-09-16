@@ -1,33 +1,34 @@
 import SEO from '../components/SEO';
+import { siteConfig } from '../content';
 import PageHero from '../components/PageHero';
 
 export default function Mission() {
   return (
     <div className="bg-background pb-24 sm:pb-32">
-      <SEO title="Our Mission" description="Our Mission - Advancing pediatric trauma care" />
+      <SEO title="Our Mission" description="The Youth Trauma Initiative exists to ensure that every child affected by trauma has access to validated assessment and measurement-based care worldwide." />
       <PageHero 
         label="Our Mission"
         title="Closing the gap in trauma care."
-        subtitle="Youth Trauma Institute helps children around the world receive better trauma and PTSD care by expanding access to the tools, training, data, and research clinicians need."
-        imageUrl="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=1200"
+        subtitle="Youth Trauma Initiative helps children around the world receive better trauma and PTSD care by expanding access to the tools, training, data, and research clinicians need."
+        layout="text-only"
       />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-12 sm:mt-16">
         <div className="mx-auto max-w-3xl space-y-16">
           <div
           >
-            <h2 className="text-2xl font-bold tracking-tight text-primary font-display">Expanded Mission Statement</h2>
+            <h2 className="text-2xl font-bold tracking-tight text-primary font-display">Our Mission</h2>
             <p className="mt-6 text-lg leading-8 text-text-muted">
-              Youth Trauma Institute exists to expand clinical access globally to the evidence-based tools and supporting resources clinicians and child-serving systems need to properly identify, assess, diagnose, monitor, and treat trauma and post-traumatic stress disorder in children and adolescents.
+              Youth Trauma Initiative exists to expand clinical access globally to the evidence-based tools and supporting resources clinicians and child-serving systems need to properly identify, assess, diagnose, monitor, and treat trauma and post-traumatic stress disorder in children and adolescents.
             </p>
           </div>
 
           <div
-            className="bg-white rounded-3xl p-8 sm:p-12 shadow-sm ring-1 ring-primary/5"
+            className="bg-white p-8 sm:p-12 border-l-4 border-secondary shadow-sm ring-1 ring-primary/5"
           >
             <h2 className="text-2xl font-bold tracking-tight text-primary font-display">The Gap in Care</h2>
             <p className="mt-6 text-lg leading-8 text-text-muted">
-              Too many children experience trauma without timely, consistent access to the tools and systems needed to recognize PTSD, guide care, and measure whether treatment is helping. Youth Trauma Institute works to close that gap.
+              Too many children experience trauma without timely, consistent access to the tools and systems needed to recognize PTSD, guide care, and measure whether treatment is helping. Youth Trauma Initiative works to close that gap.
             </p>
           </div>
 

@@ -4,53 +4,53 @@ import { ArrowRight, Microscope, BrainCircuit, LineChart, Users, CheckCircle2 } 
 import PageHero from '../components/PageHero';
 
 export default function Research() {
-  const priorities = [
+    const priorities = [
     {
-      category: 'Clinical Measurement',
+      category: 'Assessment & Measurement',
       icon: LineChart,
       topics: [
         'Assessment and measurement instrument validation',
         'Language & cultural adaptation of diagnostic tools',
-        'Treatment outcomes tracking and fidelity'
+        'Implementation barriers for routine screening'
       ]
     },
     {
-      category: 'Care Systems',
+      category: 'Treatment Outcomes & Implementation',
       icon: Users,
       topics: [
         'Implementation science in low-resource settings',
-        'Access barriers for marginalized populations',
+        'Treatment outcomes tracking and fidelity',
         'System-level cost and capacity modeling'
       ]
     },
     {
-      category: 'Advanced Analytics',
-      icon: BrainCircuit,
-      topics: [
-        'Longitudinal symptom trajectories',
-        'Multi-site data governance and aggregation',
-        'Responsible AI and machine learning in pediatric mental health'
-      ]
-    },
-    {
-      category: 'Clinical Phenotypes',
+      category: 'Risk, Resilience & Comorbidity',
       icon: Microscope,
       topics: [
         'Risk and resilience modifiers',
         'Comorbidity with other developmental disorders',
         'Neurodevelopmental impacts of complex trauma'
       ]
+    },
+    {
+      category: 'Multi-site Data & Responsible AI',
+      icon: BrainCircuit,
+      topics: [
+        'Longitudinal symptom trajectories',
+        'Multi-site data governance and aggregation',
+        'Responsible AI and machine learning in pediatric mental health'
+      ]
     }
   ];
 
   return (
     <div className="bg-background pb-24 sm:pb-32">
-      <SEO title="Research & Partnerships" description="Research & Partnerships - Building the evidence base" />
+      <SEO title="Research" description="Learn about YTI's clinical research priorities, including Risk, Resilience & Comorbidity, Care Systems, Analytics, and how we collaborate with institutions." />
       <PageHero 
         label="Research & Partnerships"
         title="Building the evidence base together."
         subtitle="YTI seeks to connect clinicians, researchers, health systems, schools, public agencies, and child-serving organizations around practical questions that can improve trauma care."
-        imageUrl="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=1200"
+        layout="text-only"
       />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-12 sm:mt-16">
@@ -93,12 +93,35 @@ export default function Research() {
             </div>
           </section>
 
+          
+          <section className="bg-accent/20 border border-primary/10 p-8 sm:p-12 mb-16">
+             <h2 className="text-2xl font-bold tracking-tight text-primary font-display mb-8 text-center">How Collaboration Works</h2>
+             <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-center md:text-left">
+                <div className="bg-white p-6 border border-primary/20 flex-1 w-full relative">
+                   <div className="w-8 h-8 rounded-full bg-secondary/10 text-secondary flex items-center justify-center font-bold mb-3 mx-auto md:mx-0">1</div>
+                   <h3 className="font-bold text-primary mb-2">Define a question</h3>
+                   <p className="text-sm text-text-muted">Identify practical gaps in pediatric trauma care or measurement.</p>
+                </div>
+                <ArrowRight className="w-6 h-6 text-primary/30 hidden md:block shrink-0" />
+                <div className="bg-white p-6 border border-primary/20 flex-1 w-full relative">
+                   <div className="w-8 h-8 rounded-full bg-secondary/10 text-secondary flex items-center justify-center font-bold mb-3 mx-auto md:mx-0">2</div>
+                   <h3 className="font-bold text-primary mb-2">Design a responsible project</h3>
+                   <p className="text-sm text-text-muted">Ensure rigorous ethical standards, data privacy, and IRB alignment.</p>
+                </div>
+                <ArrowRight className="w-6 h-6 text-primary/30 hidden md:block shrink-0" />
+                <div className="bg-white p-6 border border-primary/20 flex-1 w-full relative">
+                   <div className="w-8 h-8 rounded-full bg-secondary/10 text-secondary flex items-center justify-center font-bold mb-3 mx-auto md:mx-0">3</div>
+                   <h3 className="font-bold text-primary mb-2">Generate & share findings</h3>
+                   <p className="text-sm text-text-muted">Publish results to improve the clinical evidence base globally.</p>
+                </div>
+             </div>
+          </section>
           <section className="text-center bg-primary text-white p-12 md:p-16 relative overflow-hidden">
              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center opacity-10 mix-blend-screen"></div>
              <div className="relative z-10">
                <h2 className="text-3xl font-bold tracking-tight font-display mb-4">Collaborate With Us</h2>
                <p className="text-primary-light mb-8 max-w-xl mx-auto">
-                 We are actively seeking academic, clinical, and technological partners to advance these priorities and develop the Youth Trauma Data Initiative.
+                 We are actively seeking academic, clinical, and technological partners to advance these priorities and develop the YTI Data Initiative.
                </p>
                <Link
                 to="/contact"

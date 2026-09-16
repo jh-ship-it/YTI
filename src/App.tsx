@@ -15,14 +15,12 @@ import GetInvolved from './pages/GetInvolved';
 import About from './pages/About';
 import FAQ from './pages/FAQ';
 import Contact from './pages/Contact';
+import Transparency from './pages/Transparency';
 
-// Placeholder components for legal/minor pages
-const PlaceholderPage = ({ title }: { title: string }) => (
-  <div className="py-24 px-6 lg:px-8 max-w-7xl mx-auto">
-    <h1 className="text-4xl font-bold font-display text-primary">{title}</h1>
-    <p className="mt-6 text-lg text-text-muted">Content coming soon.</p>
-  </div>
-);
+import Donate from './pages/Donate';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
+import NotFound from './pages/NotFound';
 
 export default function App() {
   return (
@@ -37,14 +35,15 @@ export default function App() {
           <Route path="clinicians" element={<Clinicians />} />
           <Route path="research" element={<Research />} />
           <Route path="get-involved" element={<GetInvolved />} />
+          <Route path="donate" element={<Donate />} />
           <Route path="about" element={<About />} />
           <Route path="faq" element={<FAQ />} />
           <Route path="contact" element={<Contact />} />
           
-          <Route path="privacy" element={<PlaceholderPage title="Privacy Policy" />} />
-          <Route path="terms" element={<PlaceholderPage title="Terms of Use" />} />
-          <Route path="transparency" element={<PlaceholderPage title="Transparency" />} />
-          <Route path="*" element={<PlaceholderPage title="404 - Page Not Found" />} />
+          <Route path="privacy" element={<Privacy />} />
+          <Route path="terms" element={<Terms />} />
+          <Route path="transparency" element={<Transparency />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>

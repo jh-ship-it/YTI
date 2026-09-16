@@ -1,11 +1,9 @@
 import { useId } from 'react';
 
 export default function Logo({ 
-  className = "w-12 h-12",
-  variant = "mark" 
+  className = "w-12 h-12"
 }: { 
   className?: string;
-  variant?: "mark" | "horizontal";
 }) {
   const id = useId();
   const maskId = `riverMask-${id}`;
@@ -30,17 +28,6 @@ export default function Logo({
       </g>
     </g>
   );
-
-  if (variant === "horizontal") {
-    return (
-      <svg viewBox="0 0 800 120" className={className} xmlns="http://www.w3.org/2000/svg" fill="none">
-        {Mark}
-        {/* Text Lockup */}
-        <text x="180" y="70" fill="var(--color-primary, #0F3B5B)" fontFamily="var(--font-display, Lora, serif)" fontSize="42" fontWeight="700">Youth Trauma Institute</text>
-        <text x="182" y="95" fill="var(--color-secondary, #249D8F)" fontFamily="var(--font-sans, Inter, sans-serif)" fontSize="14" fontWeight="600" letterSpacing="0.1em">BRIGHTER TOMORROWS FOR BRAVER KIDS</text>
-      </svg>
-    );
-  }
 
   return (
     <svg viewBox="0 0 160 120" className={className} xmlns="http://www.w3.org/2000/svg" fill="none">

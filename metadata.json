@@ -1,6 +1,6 @@
 {
-  "name": "Youth Trauma Institute Website",
-  "description": "Public-facing website for Youth Trauma Institute (YTI).",
+  "name": "Youth Trauma Initiative Website",
+  "description": "Expanding global access to evidence-based tools, training, data, research, and implementation support for childhood trauma and PTSD care.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
