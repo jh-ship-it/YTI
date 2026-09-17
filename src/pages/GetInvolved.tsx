@@ -1,4 +1,5 @@
 import SEO from '../components/SEO';
+import FadeIn from '../components/FadeIn';
 import { Link } from 'react-router-dom';
 import { ArrowRight, HeartHandshake, Lightbulb, Landmark, UserPlus } from 'lucide-react';
 import PageHero from '../components/PageHero';
@@ -17,7 +18,7 @@ export default function GetInvolved() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-12 sm:mt-16">
         <div className="mx-auto max-w-5xl space-y-16">
           
-          <section>
+          <FadeIn as="section">
             <h2 className="text-3xl font-bold text-primary font-display mb-8">Funding & Philanthropy</h2>
             <div className="grid sm:grid-cols-2 gap-8">
               <div className="bg-white p-8 sm:p-10 border border-primary/10 shadow-sm">
@@ -28,9 +29,7 @@ export default function GetInvolved() {
                 <p className="text-text-muted mb-6 leading-relaxed">
                   Support clinical access, global capacity building, or public education initiatives to ensure child-serving organizations have the resources they need. 
                 </p>
-                <div className="bg-accent/30 p-4 mb-8 text-sm text-text-muted">
-                  <strong>Example:</strong> A $50,000 grant could subsidize access to a proprietary trauma assessment platform for 10 under-resourced community health clinics for a year.
-                </div>
+                
                 <Link to="/contact" className="inline-flex items-center gap-2 text-sm font-bold tracking-wide text-primary hover:text-secondary uppercase transition-colors group">
                   Discuss funding <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
@@ -44,17 +43,15 @@ export default function GetInvolved() {
                 <p className="text-text-muted mb-6 leading-relaxed">
                   Every contribution helps expand clinical access and awareness. Join our community of supporters committed to better care for children.
                 </p>
-                <div className="text-sm font-medium text-secondary bg-secondary/10 p-4 border border-secondary/20 mb-8">
-                  Direct donation processing is now available. Your contribution directly supports our mission to expand pediatric trauma care globally.
-                </div>
+                
                 <Link to="/donate" className="inline-flex items-center gap-2 text-sm font-bold tracking-wide text-primary hover:text-secondary uppercase transition-colors group">
-                  Make a Donation <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  Learn about supporting YTI <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
             </div>
-          </section>
+          </FadeIn>
 
-          <section>
+          <FadeIn as="section">
             <h2 className="text-3xl font-bold text-primary font-display mb-8">Institutional Partnerships</h2>
             <div className="grid sm:grid-cols-2 gap-8">
               <div className="bg-white p-8 sm:p-10 border border-primary/10 shadow-sm">
@@ -65,9 +62,7 @@ export default function GetInvolved() {
                 <p className="text-text-muted mb-6 leading-relaxed">
                   Foundations, government agencies, and corporate philanthropy can partner with YTI to drive systemic change in trauma measurement and care.
                 </p>
-                <div className="bg-accent/30 p-4 mb-8 text-sm text-text-muted">
-                  <strong>Example:</strong> A regional health department partnering with YTI to roll out standardized PTSD screening protocols across their public school systems.
-                </div>
+                
                 <Link to="/contact" className="inline-flex items-center gap-2 text-sm font-bold tracking-wide text-primary hover:text-secondary uppercase transition-colors group">
                   Talk with our team <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
@@ -81,15 +76,13 @@ export default function GetInvolved() {
                 <p className="text-text-muted mb-6 leading-relaxed">
                   Universities, hospitals, and clinical experts can contribute research capacity and scientific insight to the Youth Trauma Data Initiative.
                 </p>
-                <div className="bg-accent/30 p-4 mb-8 text-sm text-text-muted">
-                  <strong>Example:</strong> An academic medical center contributing anonymized outcome data to the Initiative while gaining access to our aggregate analytics tools.
-                </div>
+                
                 <Link to="/contact" className="inline-flex items-center gap-2 text-sm font-bold tracking-wide text-primary hover:text-secondary uppercase transition-colors group">
                   Explore collaboration <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
             </div>
-          </section>
+          </FadeIn>
 
         </div>
       </div>

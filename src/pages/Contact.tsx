@@ -1,4 +1,5 @@
 import SEO from '../components/SEO';
+import FadeIn from '../components/FadeIn';
 import { ShieldAlert } from 'lucide-react';
 import PageHero from '../components/PageHero';
 
@@ -18,7 +19,7 @@ export default function Contact() {
       />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-12 sm:mt-16">
-        <div className="mx-auto max-w-2xl space-y-8">
+        <FadeIn className="mx-auto max-w-2xl space-y-8">
           
           {/* Urgent Crisis Notice */}
           <div className="bg-rose-50 border-l-4 border-rose-600 p-5 text-rose-950 text-sm leading-relaxed">
@@ -81,7 +82,7 @@ export default function Contact() {
               </div>
             </div>
           </div>
-        </div>
+        </FadeIn>
       </div>
     </div>
   );

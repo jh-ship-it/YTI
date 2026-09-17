@@ -1,4 +1,5 @@
 import SEO from '../components/SEO';
+import FadeIn from '../components/FadeIn';
 import { siteConfig } from '../content';
 import PageHero from '../components/PageHero';
 
@@ -16,7 +17,7 @@ export default function About() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-12 sm:mt-16">
         <div className="mx-auto max-w-3xl space-y-16">
           
-          <section className="bg-white p-8 sm:p-12 border-t-4 border-secondary shadow-sm">
+          <FadeIn as="section" className="bg-white p-8 sm:p-12 border-t-4 border-secondary shadow-sm">
             <h2 className="text-3xl font-bold tracking-tight text-primary font-display mb-6">Our Origins</h2>
             <div className="space-y-6 text-lg text-text-muted leading-relaxed">
               <p>
@@ -29,10 +30,10 @@ export default function About() {
                 YTI is being established to help translate proven trauma-care knowledge and validated tools from research into real-world settings, bridging the gap between academic clinical science and community-based practice.
               </p>
             </div>
-          </section>
+          </FadeIn>
 
           {/* Strategic Pillars */}
-          <section>
+          <FadeIn as="section">
             <h2 className="text-2xl font-bold tracking-tight text-primary font-display mb-6">Strategic Pillars</h2>
             <div className="grid sm:grid-cols-2 gap-6">
               <div className="bg-white p-6 border border-primary/10 space-y-2">
@@ -60,9 +61,9 @@ export default function About() {
                 </p>
               </div>
             </div>
-          </section>
+          </FadeIn>
 
-          <section>
+          <FadeIn as="section">
             <h2 className="text-2xl font-bold tracking-tight text-primary font-display mb-6">Leadership & Governance</h2>
             <p className="text-text-muted mb-8 leading-relaxed text-lg">
               Youth Trauma Initiative is currently in its developmental phase. We are actively assembling a board of directors and a clinical advisory council composed of recognized experts in pediatric trauma, implementation science, public health, and nonprofit governance.
@@ -75,7 +76,7 @@ export default function About() {
                 Official titles, institutional affiliations, and formal governance roles will be published upon the final completion of our organizational formation and tax-exempt filing processes.
               </p>
             </div>
-          </section>
+          </FadeIn>
 
         </div>
       </div>

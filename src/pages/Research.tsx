@@ -1,4 +1,5 @@
 import SEO from '../components/SEO';
+import FadeIn from '../components/FadeIn';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Microscope, BrainCircuit, LineChart, Users, CheckCircle2 } from 'lucide-react';
 import PageHero from '../components/PageHero';
@@ -56,7 +57,7 @@ export default function Research() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-12 sm:mt-16">
         <div className="mx-auto max-w-3xl space-y-24">
           
-          <section>
+          <FadeIn as="section">
             <h2 className="text-3xl font-bold tracking-tight text-primary font-display mb-6">Our Guiding Principles</h2>
             <div className="bg-white border-l-4 border-secondary p-8 shadow-sm text-text-muted space-y-4">
               <p>
@@ -69,9 +70,9 @@ export default function Research() {
                 <strong>Responsibly Governed:</strong> Data and findings must be handled with the utmost respect for privacy, security, and consent, particularly when utilizing emerging technologies.
               </p>
             </div>
-          </section>
+          </FadeIn>
 
-          <section>
+          <FadeIn as="section">
             <h2 className="text-3xl font-bold tracking-tight text-primary font-display mb-10">Research Priorities</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {priorities.map((group, index) => (
@@ -91,10 +92,10 @@ export default function Research() {
                 </div>
               ))}
             </div>
-          </section>
+          </FadeIn>
 
           
-          <section className="bg-accent/20 border border-primary/10 p-8 sm:p-12 mb-16">
+          <FadeIn as="section" className="bg-accent/20 border border-primary/10 p-8 sm:p-12 mb-16">
              <h2 className="text-2xl font-bold tracking-tight text-primary font-display mb-8 text-center">How Collaboration Works</h2>
              <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-center md:text-left">
                 <div className="bg-white p-6 border border-primary/20 flex-1 w-full relative">
@@ -115,8 +116,8 @@ export default function Research() {
                    <p className="text-sm text-text-muted">Publish results to improve the clinical evidence base globally.</p>
                 </div>
              </div>
-          </section>
-          <section className="text-center bg-primary text-white p-12 md:p-16 relative overflow-hidden">
+          </FadeIn>
+          <FadeIn as="section" className="text-center bg-primary text-white p-12 md:p-16 relative overflow-hidden">
              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center opacity-10 mix-blend-screen"></div>
              <div className="relative z-10">
                <h2 className="text-3xl font-bold tracking-tight font-display mb-4">Collaborate With Us</h2>
@@ -130,7 +131,7 @@ export default function Research() {
                 Inquire about Partnerships <ArrowRight className="w-4 h-4" />
               </Link>
              </div>
-          </section>
+          </FadeIn>
           
         </div>
       </div>

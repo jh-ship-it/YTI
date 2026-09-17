@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: 'Youth Trauma Initiative',
   description: 'Expanding access to the clinical tools, training, research, and data clinicians need to identify and treat childhood trauma and PTSD.',
-  url: 'https://youthtraumainstitute.org',
+  url: 'https://youthtraumainitiative.org',
   tagline: 'Brighter Tomorrows for Braver Kids',
   legalStatus: 'YTI is currently being established as a nonprofit organization.',
-  mission: 'The Youth Trauma Initiative exists to ensure that every child affected by trauma has access to evidence-based assessment and measurement-based care, regardless of geography or resources.',
+  mission: 'Youth Trauma Initiative helps children around the world receive better trauma and PTSD care by expanding access to the tools, training, data, research, and implementation support clinicians and child-serving systems need.',
 };

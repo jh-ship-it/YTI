@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import SEO from '../components/SEO';
+import FadeIn from '../components/FadeIn';
 import { ChevronDown } from 'lucide-react';
 
 const faqs = [

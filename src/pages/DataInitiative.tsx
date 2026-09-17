@@ -1,5 +1,6 @@
 import SEO from '../components/SEO';
-import { Database, Network, TrendingUp, ShieldAlert, ArrowRight } from 'lucide-react';
+import FadeIn from '../components/FadeIn';
+import { Database, Network, TrendingUp, ShieldAlert } from 'lucide-react';
 import PageHero from '../components/PageHero';
 
 export default function DataInitiative() {
@@ -16,7 +17,7 @@ export default function DataInitiative() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-12 sm:mt-16">
         <div className="mx-auto max-w-3xl space-y-20">
           
-          <section>
+          <FadeIn as="section">
             <h2 className="text-sm font-bold tracking-[0.2em] text-secondary uppercase mb-4">The Care Pathway</h2>
             <h3 className="text-3xl font-bold tracking-tight text-primary font-display">From individual assessments to shared learning</h3>
             <p className="mt-6 text-lg leading-8 text-text-muted">
@@ -82,9 +83,9 @@ export default function DataInitiative() {
                 ))}
               </ul>
             </div>
-          </section>
+          </FadeIn>
 
-          <section>
+          <FadeIn as="section">
             <h2 className="text-3xl font-bold tracking-tight text-primary font-display">Shared Data Concept</h2>
             <p className="mt-6 text-lg leading-8 text-text-muted">
               Where ethically and legally appropriate, participating institutions may contribute data to a shared multi-site research resource. This responsibly governed resource could support global research into trauma and treatment.
@@ -106,12 +107,12 @@ export default function DataInitiative() {
                   </p>
                </div>
             </div>
-          </section>
+          </FadeIn>
 
-          <section>
+          <FadeIn as="section">
             <h2 className="text-3xl font-bold tracking-tight text-primary font-display">Advanced Analytics</h2>
             <p className="mt-6 text-lg leading-8 text-text-muted">
-              YTI intends to eventually use computational modeling, statistical analysis, and machine learning as research tools to study large, complex trauma datasets. If employed, these techniques may help researchers identify complex patterns in treatment response and symptom trajectories.
+              YTI may eventually use computational modeling, statistical analysis, and machine learning as research tools to study large, complex trauma datasets. If employed, these techniques may help researchers identify complex patterns in treatment response and symptom trajectories.
             </p>
             
             <div className="mt-6 bg-primary/5 p-6 border-l-4 border-secondary">
@@ -138,7 +139,7 @@ export default function DataInitiative() {
                 </li>
               ))}
             </ul>
-          </section>
+          </FadeIn>
 
         </div>
       </div>

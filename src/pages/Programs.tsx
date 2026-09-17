@@ -1,4 +1,5 @@
 import SEO from '../components/SEO';
+import FadeIn from '../components/FadeIn';
 import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 import { ArrowRight } from 'lucide-react';
@@ -17,7 +18,7 @@ export default function Programs() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-12 sm:mt-16 space-y-24">
         
         {/* Program 1 */}
-        <section className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+        <FadeIn as="section" className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
           <div>
             <p className="text-sm font-bold tracking-[0.2em] text-secondary uppercase mb-4">Program Area 01</p>
             <h2 className="text-3xl font-bold text-primary font-display mb-4">Clinical Access & Implementation</h2>
@@ -54,10 +55,10 @@ export default function Programs() {
                 <p className="text-text-muted">By subsidizing access to proprietary and hard-to-access tools, we equip front-line providers with the tools and implementation support they need.</p>
              </div>
           </div>
-        </section>
+        </FadeIn>
 
         {/* Program 2 */}
-        <section className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+        <FadeIn as="section" className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
           <div className="order-2 lg:order-1 bg-primary text-white p-12 sm:p-16 h-full flex flex-col justify-center">
              <div className="text-center space-y-4 max-w-sm mx-auto">
                 <div className="w-16 h-1 bg-sun mx-auto mb-8"></div>
@@ -94,10 +95,10 @@ export default function Programs() {
               Partner on Education <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
-        </section>
+        </FadeIn>
 
         {/* Program 3 */}
-        <section className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+        <FadeIn as="section" className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
           <div>
             <p className="text-sm font-bold tracking-[0.2em] text-secondary uppercase mb-4">Program Area 03</p>
             <h2 className="text-3xl font-bold text-primary font-display mb-4">Research, Data & Outcomes</h2>
@@ -137,10 +138,10 @@ export default function Programs() {
                 <p className="text-sm font-bold text-primary uppercase tracking-widest">Status: Planned</p>
              </div>
           </div>
-        </section>
+        </FadeIn>
 
         {/* Program 4 */}
-        <section className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+        <FadeIn as="section" className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
           <div className="order-2 lg:order-1 bg-accent p-12 sm:p-16 h-full flex flex-col justify-center border border-primary/10">
              <div className="text-center space-y-4 max-w-sm mx-auto">
                 <div className="w-16 h-1 bg-secondary mx-auto mb-8"></div>
@@ -177,7 +178,7 @@ export default function Programs() {
               Global Partnerships <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
-        </section>
+        </FadeIn>
 
       </div>
     </div>

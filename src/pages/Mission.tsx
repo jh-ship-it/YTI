@@ -1,4 +1,5 @@
 import SEO from '../components/SEO';
+import FadeIn from '../components/FadeIn';
 import { siteConfig } from '../content';
 import PageHero from '../components/PageHero';
 

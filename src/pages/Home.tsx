@@ -1,5 +1,6 @@
 import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
+import FadeIn from '../components/FadeIn';
 import { ArrowRight, Globe2, BookOpen, Activity, Users2, Database, ShieldCheck, Heart, Users, LineChart } from 'lucide-react';
 export default function Home() {
   
@@ -24,7 +25,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10 w-full">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Text Content */}
-            <div className="max-w-xl">
+            <FadeIn delay={0.1} className="max-w-xl">
               <h1 
                 className="text-5xl sm:text-6xl lg:text-[4.5rem] font-bold tracking-tight text-primary font-display leading-[1.1]"
               >
@@ -49,7 +50,7 @@ export default function Home() {
                   Get Involved <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
-            </div>
+            </FadeIn>
 
             {/* Right Column - Decorative Text */}
             <div className="hidden lg:flex flex-col items-end justify-start h-full pt-12 pr-12">
@@ -206,16 +207,16 @@ export default function Home() {
       {/* Funding Flow Explainer */}
       <section className="py-24 sm:py-32 bg-white px-6 lg:px-8 border-t border-accent">
         <div className="mx-auto max-w-7xl text-center">
-          <div>
+          <FadeIn>
             <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl font-display">
               Your support becomes clinical capacity.
             </h2>
             <p className="mt-6 text-lg leading-8 text-text-muted max-w-2xl mx-auto">
               Funders support Youth Trauma Initiative. YTI then independently directs resources toward programs that expand clinical access, research, education, implementation, training, and global capacity.
             </p>
-          </div>
+          </FadeIn>
           
-          <div className="mt-16 max-w-5xl mx-auto flex flex-col items-center">
+          <FadeIn delay={0.2} className="mt-16 max-w-5xl mx-auto flex flex-col items-center">
             
             {/* 1. Funders */}
             <div className="bg-accent/40 border border-primary/20 px-8 py-4 w-full max-w-3xl">
@@ -295,14 +296,14 @@ export default function Home() {
               </p>
             </div>
             
-          </div>
+          </FadeIn>
         </div>
       </section>
       {/* Closing CTA */}
       <section className="py-24 sm:py-32 bg-primary px-6 lg:px-8 text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center opacity-10 mix-blend-screen"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/90 to-primary/80"></div>
-        <div className="mx-auto max-w-3xl relative z-10">
+        <FadeIn className="mx-auto max-w-3xl relative z-10">
           <h2
             className="text-3xl font-bold tracking-tight text-white sm:text-4xl font-display"
           >
@@ -326,7 +327,7 @@ export default function Home() {
               Contact Us <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
-        </div>
+        </FadeIn>
       </section>
     </div>
   );

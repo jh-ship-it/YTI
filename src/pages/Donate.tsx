@@ -1,4 +1,5 @@
 import SEO from '../components/SEO';
+import FadeIn from '../components/FadeIn';
 import PageHero from '../components/PageHero';
 import { Heart, ShieldCheck, CheckCircle2, ArrowRight, Mail, FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -62,22 +63,9 @@ export default function Donate() {
             <div className="bg-primary text-white p-8 border border-primary-light/30">
               <h3 className="font-display font-bold text-xl mb-3">Institutional & Major Gifts</h3>
               <p className="text-sm text-gray-300 leading-relaxed mb-6">
-                We work directly with philanthropic foundations, family offices, donor-advised funds (DAF), and corporate partners seeking transformative, measurable returns on youth mental health.
+                We welcome conversations with philanthropic foundations, family offices, donor-advised funds (DAF), and corporate partners.
               </p>
-              <ul className="space-y-3 text-xs text-gray-300 mb-6">
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-sun shrink-0" />
-                  <span>Wire / ACH instructions & multi-year pledges</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-sun shrink-0" />
-                  <span>Donor-Advised Fund (DAF) grants</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-sun shrink-0" />
-                  <span>Named clinical cohorts and regional pilot grants</span>
-                </li>
-              </ul>
+              
               <a href="mailto:giving@youthtraumainitiative.org" className="inline-flex items-center gap-2 bg-sun text-primary font-bold text-xs uppercase px-5 py-2.5 tracking-wider hover:bg-sun/90 transition-colors">
                 Inquire about Major Gifts <ArrowRight className="w-3.5 h-3.5" />
               </a>

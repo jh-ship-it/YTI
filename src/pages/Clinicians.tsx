@@ -1,4 +1,5 @@
 import SEO from '../components/SEO';
+import FadeIn from '../components/FadeIn';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Building2, Stethoscope, CheckCircle2 } from 'lucide-react';
 import PageHero from '../components/PageHero';
@@ -17,7 +18,7 @@ export default function Clinicians() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-12 sm:mt-16">
         <div className="mx-auto max-w-4xl space-y-16">
           
-          <section>
+          <FadeIn as="section">
             <h2 className="text-sm font-bold tracking-[0.2em] text-secondary uppercase mb-6 text-center">How We Support You</h2>
             <div className="grid sm:grid-cols-2 gap-8">
               <div className="bg-white p-8 sm:p-10 border border-primary/10 shadow-sm hover:border-primary/20 transition-colors">
@@ -62,9 +63,9 @@ export default function Clinicians() {
                 </ul>
               </div>
             </div>
-          </section>
+          </FadeIn>
 
-                    <section className="bg-white p-8 sm:p-12 border border-primary/10 shadow-sm">
+                    <FadeIn as="section" className="bg-white p-8 sm:p-12 border border-primary/10 shadow-sm">
             <h2 className="text-2xl font-bold tracking-tight text-primary font-display mb-6">Eligibility Self-Screen</h2>
             
             <div className="grid sm:grid-cols-2 gap-10">
@@ -112,8 +113,8 @@ export default function Clinicians() {
                 </ul>
               </div>
             </div>
-          </section>
-          <section className="bg-primary text-white p-12 md:p-16 text-center border-t border-primary-light/30">
+          </FadeIn>
+          <FadeIn as="section" className="bg-primary text-white p-12 md:p-16 text-center border-t border-primary-light/30">
             <h2 className="text-3xl font-bold font-display mb-4">Tell us about your organization</h2>
             <p className="text-gray-300 mb-8 max-w-xl mx-auto text-lg">
               If your organization is interested in partnering with YTI or seeking support for clinical resources, please reach out to our team.
@@ -124,7 +125,7 @@ export default function Clinicians() {
             >
               Tell us about your organization <ArrowRight className="w-4 h-4" />
             </Link>
-          </section>
+          </FadeIn>
 
         </div>
       </div>
