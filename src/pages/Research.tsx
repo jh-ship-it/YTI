@@ -103,13 +103,13 @@ export default function Research() {
                    <h3 className="font-bold text-primary mb-2">Define a question</h3>
                    <p className="text-sm text-text-muted">Identify practical gaps in pediatric trauma care or measurement.</p>
                 </div>
-                <ArrowRight className="w-6 h-6 text-primary/30 hidden md:block shrink-0" />
+                
                 <div className="bg-white p-6 border border-primary/20 flex-1 w-full relative">
                    <div className="w-8 h-8 rounded-full bg-secondary/10 text-secondary flex items-center justify-center font-bold mb-3 mx-auto md:mx-0">2</div>
                    <h3 className="font-bold text-primary mb-2">Design a responsible project</h3>
                    <p className="text-sm text-text-muted">Ensure rigorous ethical standards, data privacy, and IRB alignment.</p>
                 </div>
-                <ArrowRight className="w-6 h-6 text-primary/30 hidden md:block shrink-0" />
+                
                 <div className="bg-white p-6 border border-primary/20 flex-1 w-full relative">
                    <div className="w-8 h-8 rounded-full bg-secondary/10 text-secondary flex items-center justify-center font-bold mb-3 mx-auto md:mx-0">3</div>
                    <h3 className="font-bold text-primary mb-2">Generate & share findings</h3>
@@ -118,7 +118,6 @@ export default function Research() {
              </div>
           </FadeIn>
           <FadeIn as="section" className="text-center bg-primary text-white p-12 md:p-16 relative overflow-hidden">
-             <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center opacity-10 mix-blend-screen"></div>
              <div className="relative z-10">
                <h2 className="text-3xl font-bold tracking-tight font-display mb-4">Collaborate With Us</h2>
                <p className="text-primary-light mb-8 max-w-xl mx-auto">
@@ -128,7 +127,7 @@ export default function Research() {
                 to="/contact"
                 className="inline-flex items-center gap-2 bg-secondary px-8 py-3.5 text-sm font-bold tracking-wide text-white hover:bg-secondary-light transition-colors uppercase"
               >
-                Inquire about Partnerships <ArrowRight className="w-4 h-4" />
+                Inquire about Partnerships 
               </Link>
              </div>
           </FadeIn>
@@ -138,3 +137,4 @@ export default function Research() {
     </div>
   );
 }
+

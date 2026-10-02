@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { siteConfig } from '../content';
 
 interface SEOProps {
@@ -9,11 +10,12 @@ interface SEOProps {
 }
 
 export default function SEO({ title, description, image, url }: SEOProps) {
+  const { pathname } = useLocation();
   useEffect(() => {
     const fullTitle = title ? `${title} | ${siteConfig.name}` : siteConfig.name;
     const finalDescription = description || siteConfig.description;
     const finalImage = image || 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=1200';
-    const finalUrl = url ? `${siteConfig.url}${url}` : siteConfig.url;
+    const finalUrl = `${siteConfig.url}${url || pathname}`;
 
     document.title = fullTitle;
     
@@ -54,7 +56,8 @@ export default function SEO({ title, description, image, url }: SEOProps) {
       link.setAttribute('href', finalUrl);
       document.head.appendChild(link);
     }
-  }, [title, description, image, url]);
+  }, [title, description, image, url, pathname]);
 
   return null;
 }
+

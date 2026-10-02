@@ -25,7 +25,7 @@ export default function Privacy() {
           <div className="space-y-1">
             <h3 className="font-bold text-base">Critical Health Information Safeguard (HIPAA / Protected Health Information)</h3>
             <p className="text-sm leading-relaxed">
-              Youth Trauma Initiative provides institutional, scientific, educational, and philanthropic resources. <strong>This website does not collect, process, or store Protected Health Information (PHI).</strong> Please do not submit patient names, clinical records, diagnostic details, or confidential medical information through our general contact or inquiry forms.
+              Youth Trauma Initiative provides institutional, scientific, educational, and philanthropic resources. <strong>This website is not intended to receive Protected Health Information (PHI).</strong> Please do not submit patient names, clinical records, diagnostic details, or confidential medical information in the contact form or any organizational inquiry.
             </p>
           </div>
         </div>
@@ -44,10 +44,10 @@ export default function Privacy() {
             <p>We collect only the information necessary to fulfill our mission and respond to institutional inquiries:</p>
             <ul className="list-disc pl-6 space-y-2">
               <li>
-                <strong className="text-primary">Contact & Inquiry Information:</strong> When you submit a partnership, clinical support, or research inquiry, we collect your name, email address, organization name, role, country, and message contents.
+                <strong className="text-primary">Contact & Inquiry Information:</strong> The contact form stores your name, email address, optional organization, inquiry type, message, submission reference, and submission time in the site database. This information is used to review and respond to your inquiry. Please do not submit confidential health information.
               </li>
               <li>
-                <strong className="text-primary">Philanthropic & Donor Records:</strong> When you pledge or make a donation, we collect donor name, email, billing/mailing address, gift designation, and optional honorarium/dedication details. Payment processing is handled by compliant third-party payment gateways; YTI does not store full payment card numbers or banking credentials.
+                <strong className="text-primary">Philanthropic & Donor Records:</strong> Online giving is not available through this website. Information about any future giving process and its privacy practices will be provided when that process is established.
               </li>
               <li>
                 <strong className="text-primary">Technical Logs & Usage Metrics:</strong> Like most web servers, our infrastructure records standard technical metadata such as browser type, operating system, referring URL, and page request timestamps to ensure site security and availability. We do not use invasive third-party cross-site trackers.
@@ -72,14 +72,14 @@ export default function Privacy() {
           <section className="space-y-4">
             <h2 className="text-2xl font-bold font-display text-primary">4. Data Governance & Clinical Research Data</h2>
             <p>
-              Any future multi-site clinical datasets associated with the planned Youth Trauma Data Initiative will be governed by independent institutional review board (IRB) approvals, explicit patient/guardian consents, and strict de-identification protocols meeting or exceeding HIPAA Safe Harbor and Expert Determination standards. <strong>No clinical research data is collected or stored through this public website.</strong>
+              Any future multi-site clinical datasets associated with the planned Youth Trauma Data Initiative would require appropriate ethics review, consent or other applicable authorization, data-use agreements, and privacy and security controls before collection. <strong>No clinical research data is collected or stored through this public website.</strong>
             </p>
           </section>
 
           <section className="space-y-4">
             <h2 className="text-2xl font-bold font-display text-primary">5. Cookies and Web Analytics</h2>
             <p>
-              This website uses only essential session cookies and privacy-preserving, aggregated telemetry necessary to maintain site stability, prevent spam (including honeypot verification), and optimize page performance. We do not use third-party behavioral advertising cookies.
+              The site does not include advertising trackers or custom analytics. Hosting services may process technical request information for security and delivery. Fonts are requested from Google Fonts; your browser contacts that service when loading the site.
             </p>
           </section>
 
@@ -106,7 +106,7 @@ export default function Privacy() {
               <p className="font-bold text-primary">Youth Trauma Initiative</p>
               <p>Attention: Privacy & Governance Officer</p>
               <p>Inquiries: <Link to="/contact" className="text-secondary font-semibold hover:underline">Via Contact Form</Link></p>
-              <p className="text-xs text-text-muted mt-2">Policy last updated: September 2026</p>
+              <p className="text-xs text-text-muted mt-2">Policy last updated: October 2026</p>
             </div>
           </section>
         </div>
@@ -114,3 +114,4 @@ export default function Privacy() {
     </div>
   );
 }
+

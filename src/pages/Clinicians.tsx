@@ -123,7 +123,7 @@ export default function Clinicians() {
               to="/contact"
               className="inline-flex items-center gap-2 bg-secondary px-8 py-3.5 text-sm font-bold tracking-wide text-white hover:bg-secondary-light transition-colors uppercase"
             >
-              Tell us about your organization <ArrowRight className="w-4 h-4" />
+              Tell us about your organization 
             </Link>
           </FadeIn>
 
@@ -132,3 +132,4 @@ export default function Clinicians() {
     </div>
   );
 }
+

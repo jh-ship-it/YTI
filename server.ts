@@ -8,20 +8,9 @@ async function startServer() {
 
   app.use(express.json());
 
-  // API routes
-  app.post("/api/contact", (req, res) => {
-    // Honeypot check
-    const { website, name, email, organization, role, country, inquiryType, message } = req.body;
-    
-    if (website) {
-      // It's a bot filling the honeypot
-      return res.status(200).json({ success: true, message: "Message received." });
-    }
-
-    // In a real application, you would send an email or store this in a database here.
-    console.log("Contact form submission:", { name, email, organization, role, country, inquiryType, message });
-    
-    res.status(200).json({ success: true, message: "Message received." });
+  // No delivery backend is configured. Never acknowledge an undelivered inquiry.
+  app.post("/api/contact", (_req, res) => {
+    res.status(503).json({ success: false, message: "Online inquiries are not accepted. Please use the contact details on our Contact page." });
   });
 
   // Vite middleware for development
@@ -45,3 +34,4 @@ async function startServer() {
 }
 
 startServer();
+

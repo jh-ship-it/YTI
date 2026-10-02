@@ -41,7 +41,7 @@ export default function GlobalAccess() {
               </div>
               
               <p className="text-text-muted leading-relaxed mb-10 text-lg">
-                International programs may be developed in close collaboration with qualified local partners, ensuring with appropriate attention to applicable to local clinical regulations, medical ethics, patient privacy, child safeguarding standards, and cultural contexts.
+                International programs may be developed in close collaboration with qualified local partners, with appropriate attention to applicable local clinical regulations, medical ethics, patient privacy, child safeguarding standards, and cultural contexts.
               </p>
               
               <div className="grid sm:grid-cols-2 gap-x-8 gap-y-10">
@@ -76,7 +76,7 @@ export default function GlobalAccess() {
               to="/contact"
               className="inline-flex items-center gap-2 bg-primary px-8 py-3.5 text-sm font-bold tracking-wide text-white hover:bg-primary-light uppercase transition-colors"
             >
-              Discuss an international partnership <ArrowRight className="w-4 h-4" />
+              Discuss an international partnership 
             </Link>
           </FadeIn>
 
@@ -85,3 +85,4 @@ export default function GlobalAccess() {
     </div>
   );
 }
+

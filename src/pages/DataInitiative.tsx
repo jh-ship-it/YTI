@@ -1,3 +1,4 @@
+import CarePathway from '../components/CarePathway';
 import SEO from '../components/SEO';
 import FadeIn from '../components/FadeIn';
 import { Database, Network, TrendingUp, ShieldAlert } from 'lucide-react';
@@ -6,10 +7,10 @@ import PageHero from '../components/PageHero';
 export default function DataInitiative() {
   return (
     <div className="bg-background pb-24 sm:pb-32">
-      <SEO title="Data Initiative" description="The YTI Data Initiative helps organizations use repeated clinical measurement and outcomes data to better understand trauma treatment and recovery." />
+      <SEO title="Data Initiative" description="The planned YTI Data Initiative could help organizations use repeated clinical measurement and outcomes data to understand trauma treatment and recovery." />
       <PageHero 
         label="Planned Initiative"
-        title="Building the data infrastructure for better trauma care."
+        title="YTI Data Initiative"
         subtitle="The YTI Data Initiative is a planned effort intended to help child-serving programs use measurement-based care and data more effectively to understand trauma treatment, progress, and clinically meaningful outcomes."
         layout="text-only"
       />
@@ -24,47 +25,8 @@ export default function DataInitiative() {
               Behavioral health has historically lagged other areas of medicine in routine use of evidence-based measurement, enabling technology, and systematic outcomes analysis. We are planning the infrastructure to change that.
             </p>
             
-            <div className="mt-12 bg-white border-l-4 border-primary p-8 sm:p-12 shadow-sm">
-              <div className="flex flex-col gap-6">
-                 <div className="flex items-center gap-4 text-primary font-medium">
-                    <div className="w-10 h-10 border border-primary flex items-center justify-center shrink-0 font-bold">1</div>
-                    <span>Screen & Assess</span>
-                 </div>
-                 <div className="w-px h-4 bg-primary ml-5"></div>
-                 
-                 <div className="flex items-center gap-4 text-primary font-medium">
-                    <div className="w-10 h-10 border border-primary flex items-center justify-center shrink-0 font-bold">2</div>
-                    <span>Treat</span>
-                 </div>
-                 <div className="w-px h-4 bg-primary ml-5"></div>
+            <CarePathway />
 
-                 <div className="flex items-center gap-4 text-primary font-medium">
-                    <div className="w-10 h-10 border border-primary flex items-center justify-center shrink-0 font-bold">3</div>
-                    <span>Re-measure at appropriate intervals</span>
-                 </div>
-                 <div className="w-px h-4 bg-primary ml-5"></div>
-                 
-                 <div className="flex items-center gap-4 text-primary font-medium">
-                    <div className="w-10 h-10 border border-primary flex items-center justify-center shrink-0 font-bold">4</div>
-                    <span>Analyze Outcomes</span>
-                 </div>
-                 <div className="w-px h-4 bg-primary ml-5"></div>
-
-                 <div className="flex items-center gap-4 text-primary font-medium">
-                    <div className="w-10 h-10 border border-primary flex items-center justify-center shrink-0 font-bold">5</div>
-                    <span>Generate Insights</span>
-                 </div>
-                 <div className="w-px h-4 bg-primary ml-5"></div>
-                 
-                 <div className="flex items-center gap-4 text-secondary font-bold">
-                    <div className="w-10 h-10 bg-secondary text-white flex items-center justify-center shrink-0">
-                      <Database className="w-5 h-5" />
-                    </div>
-                    <span>Inform Better Care</span>
-                 </div>
-              </div>
-            </div>
-            
             <div className="mt-12 border-t border-primary/10 pt-12">
               <h3 className="font-semibold text-primary text-lg mb-6">What participating programs may receive:</h3>
               <ul className="space-y-4 text-text-muted list-none">
@@ -120,7 +82,7 @@ export default function DataInitiative() {
                 Important Context on AI
               </p>
               <p className="mt-2 text-sm text-text-muted leading-relaxed">
-                Human judgment stays central. Artificial intelligence and machine learning may be used solely as research and analytical tools—not substitutes for qualified clinical care. AI does not independently diagnose children or prescribe treatment. Clinical diagnosis and treatment remain the strict responsibility of appropriately qualified human professionals.
+                Human judgment stays central. Artificial intelligence and machine learning may be used solely as research and analytical tools—not substitutes for qualified clinical care. AI and machine learning will not diagnose or treat children. Clinical diagnosis and treatment remain the strict responsibility of appropriately qualified human professionals.
               </p>
             </div>
 
@@ -146,3 +108,4 @@ export default function DataInitiative() {
     </div>
   );
 }
+

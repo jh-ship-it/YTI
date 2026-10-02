@@ -10,8 +10,7 @@ export default function About() {
       <PageHero 
         label="About Youth Trauma Initiative"
         title="Built to help close the gap between evidence and access."
-        subtitle="Youth Trauma Initiative is being developed to expand access to the clinical tools, knowledge, data, training, and implementation support needed to improve childhood-trauma care."
-        imageUrl="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=1200" layout="text-only"
+        subtitle="Youth Trauma Initiative is being developed to expand access to the clinical tools, knowledge, data, training, and implementation support needed to improve childhood-trauma care." layout="text-only"
       />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-12 sm:mt-16">
@@ -83,3 +82,4 @@ export default function About() {
     </div>
   );
 }
+

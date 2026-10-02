@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+import { contact } from '../worker/contact.js';
+import worker from '../dist/server/index.js';
+const payload = {id:'11111111-1111-4111-8111-111111111111',name:'Form check',email:'test@example.org',organization:'',topic:'General inquiry',message:'Test inquiry',website:''};
+const request = (body=payload,origin='https://example.org') => new Request('https://example.org/api/contact',{method:'POST',headers:{Origin:origin,'Content-Type':'application/json'},body:JSON.stringify(body)});
+let saved;
+const DB = {prepare(sql){assert.match(sql,/INSERT INTO inquiries/);return {bind(...values){saved=values;return {run:async()=>({success:true})}}}}};
+assert.equal((await contact(request(),{DB})).status,201);
+assert.equal(saved[1],'Form check');
+assert.equal((await contact(request({...payload,email:'bad'}),{DB})).status,400);
+assert.equal((await contact(request(payload,'https://other.org'),{DB})).status,403);
+assert.equal((await contact(request({...payload,message:'x'.repeat(4001)}),{DB})).status,400);
+assert.equal((await contact(request(),{})).status,503);
+const page = await worker.fetch(new Request('https://example.org/contact',{headers:{Accept:'text/html'}}),{});
+assert.equal(page.status,200); assert.match(await page.text(),/<div id="root">/);
+assert.equal((await worker.fetch(new Request('https://example.org/api/private'),{})).status,404);
+assert.equal((await worker.fetch(new Request('https://example.org/brand/yti-horizontal.png'),{})).headers.get('Content-Type'),'image/png');
+console.log('Contact validation, persistence response, failure handling, and deployed asset routing passed.');

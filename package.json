@@ -9,12 +9,14 @@
     "start": "node dist/server.cjs",
     "preview": "vite preview",
     "clean": "rm -rf dist server.js",
-    "lint": "eslint src && tsc --noEmit"
+    "lint": "eslint src && tsc --noEmit",
+    "build:site": "node scripts/build-site.mjs"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.14",
     "@vitejs/plugin-react": "^5.0.4",
     "dotenv": "^17.2.3",
+    "drizzle-orm": "^0.45.3",
     "express": "^4.21.2",
     "lucide-react": "^0.546.0",
     "motion": "^13.4.0",
@@ -27,6 +29,7 @@
     "@types/express": "^4.17.25",
     "@types/node": "^22.20.2",
     "autoprefixer": "^10.4.21",
+    "drizzle-kit": "^0.31.11",
     "esbuild": "^0.25.12",
     "eslint": "^9.39.5",
     "eslint-plugin-jsx-a11y": "^6.10.2",

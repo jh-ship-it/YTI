@@ -6,3 +6,4 @@ export const siteConfig = {
   legalStatus: 'YTI is currently being established as a nonprofit organization.',
   mission: 'Youth Trauma Initiative helps children around the world receive better trauma and PTSD care by expanding access to the tools, training, data, research, and implementation support clinicians and child-serving systems need.',
 };
+

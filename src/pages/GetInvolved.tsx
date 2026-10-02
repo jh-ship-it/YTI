@@ -10,9 +10,8 @@ export default function GetInvolved() {
       <SEO title="Support YTI" description="Support Youth Trauma Initiative through philanthropy or institutional partnerships to help expand access to evidence-based pediatric trauma care globally." />
       <PageHero 
         label="Get Involved"
-        title="Help put better trauma care within reach."
+        title="Help put trauma care within reach."
         subtitle="Funding for Youth Trauma Initiative can help expand access to evidence-based clinical resources, strengthen measurement-based care, support research, and bring proven approaches to communities."
-        imageUrl="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&q=80&w=1200"
       />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-12 sm:mt-16">
@@ -31,7 +30,7 @@ export default function GetInvolved() {
                 </p>
                 
                 <Link to="/contact" className="inline-flex items-center gap-2 text-sm font-bold tracking-wide text-primary hover:text-secondary uppercase transition-colors group">
-                  Discuss funding <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  Discuss funding 
                 </Link>
               </div>
 
@@ -41,11 +40,11 @@ export default function GetInvolved() {
                   <h3 className="text-xl font-bold text-primary font-display">Individual Support</h3>
                 </div>
                 <p className="text-text-muted mb-6 leading-relaxed">
-                  Every contribution helps expand clinical access and awareness. Join our community of supporters committed to better care for children.
+                  Every contribution helps expand clinical access and awareness. Join our community of supporters committed to effective care for children.
                 </p>
                 
                 <Link to="/donate" className="inline-flex items-center gap-2 text-sm font-bold tracking-wide text-primary hover:text-secondary uppercase transition-colors group">
-                  Learn about supporting YTI <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  Learn about supporting YTI 
                 </Link>
               </div>
             </div>
@@ -64,7 +63,7 @@ export default function GetInvolved() {
                 </p>
                 
                 <Link to="/contact" className="inline-flex items-center gap-2 text-sm font-bold tracking-wide text-primary hover:text-secondary uppercase transition-colors group">
-                  Talk with our team <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  Talk with our team 
                 </Link>
               </div>
 
@@ -78,7 +77,7 @@ export default function GetInvolved() {
                 </p>
                 
                 <Link to="/contact" className="inline-flex items-center gap-2 text-sm font-bold tracking-wide text-primary hover:text-secondary uppercase transition-colors group">
-                  Explore collaboration <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  Explore collaboration 
                 </Link>
               </div>
             </div>
@@ -89,3 +88,4 @@ export default function GetInvolved() {
     </div>
   );
 }
+

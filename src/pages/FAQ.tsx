@@ -1,3 +1,4 @@
+import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import { useState } from 'react';
 import SEO from '../components/SEO';
 import FadeIn from '../components/FadeIn';
@@ -47,6 +48,7 @@ const faqs = [
 ];
 
 export default function FAQ() {
+  const reduced = useReducedMotion();
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
@@ -82,11 +84,11 @@ export default function FAQ() {
                     />
                   </span>
                 </button>
-                {openIndex === index && (
-                  <div className="px-6 pb-6" id={`faq-answer-${index}`} role="region" aria-labelledby={`faq-question-${index}`}>
-                    <p className="text-text-muted">{faq.answer}</p>
-                  </div>
-                )}
+                <AnimatePresence initial={false}>{openIndex === index && (
+                  <motion.div initial={reduced ? false : {height:0,opacity:0}} animate={{height:"auto",opacity:1}} exit={{height:0,opacity:0}} transition={{duration:reduced?0:.22}} className="overflow-hidden" id={`faq-answer-${index}`} role="region" aria-labelledby={`faq-question-${index}`}>
+                    <p className="px-6 pb-6 text-text-muted">{faq.answer}</p>
+                  </motion.div>
+                )}</AnimatePresence>
               </div>
             ))}
           </dl>
@@ -114,3 +116,4 @@ export default function FAQ() {
     </div>
   );
 }
+

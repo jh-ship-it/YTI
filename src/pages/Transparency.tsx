@@ -49,10 +49,11 @@ export default function Transparency() {
         <FadeIn as="section">
           <h2 className="text-2xl font-display font-bold text-primary mb-4">Future Reporting</h2>
           <p className="text-text-muted leading-relaxed">
-            As we launch our initial programs, YTI will publish annual reports, Board of Directors information, and financial documents to provide full organizational transparency as that information becomes available.
+            As programs launch, YTI will publish annual reports, board information, and financial documents as they become available. This will include IRS Form 990-series filings once filed, and links to ProPublica Nonprofit Explorer and Candid/GuideStar profiles once available.
           </p>
         </FadeIn>
       </div>
     </div>
   );
 }
+

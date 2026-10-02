@@ -10,17 +10,8 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
-            <div className="flex items-center gap-4">
-              <Logo className="w-14 h-14 text-white shrink-0" />
-              <div className="flex flex-col">
-                <span className="font-display font-semibold text-2xl tracking-tight text-white leading-tight">
-                  Youth Trauma Initiative
-                </span>
-                <span className="text-[10px] tracking-widest font-semibold text-white/70 uppercase mt-1">
-                  Brighter Tomorrows for Braver Kids
-                </span>
-              </div>
-            </div>
+            <div className="footer-logo"><Logo /></div>
+            <p className="text-sm text-white/80">Brighter Tomorrows for Braver Kids</p>
             <p className="text-sm leading-6 text-gray-300 max-w-xs">
               Expanding global access to the evidence-based tools, training, data, and research needed to improve childhood trauma and PTSD care.
             </p>
@@ -94,7 +85,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link to="/donate" className="text-sm leading-6 text-sun font-semibold hover:text-white transition-colors">
-                      Donate & Philanthropy
+                      Support YTI
                     </Link>
                   </li>
                 </ul>
@@ -123,14 +114,14 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-12 border-t border-white/10 pt-8 sm:mt-16">
-          <div className="bg-white/5 p-4 sm:p-5 border border-white/10 rounded-lg text-xs leading-relaxed text-gray-300 max-w-4xl mb-8">
+          <div className="bg-white/5 p-4 sm:p-5 border border-white/10 rounded-lg text-sm leading-relaxed text-gray-300 max-w-4xl mb-8">
             <span className="font-bold text-white uppercase tracking-wider block mb-1">
               Crisis Disclaimer & Resources
             </span>
             Youth Trauma Initiative does not provide direct clinical services, psychiatric crisis intervention, or emergency medical care. If you, a child, or a family member is in immediate physical danger or experiencing a mental health emergency, please dial <strong>988</strong> (USA & Canada Suicide & Crisis Lifeline) or contact local emergency services immediately.
           </div>
 
-          <p className="text-xs leading-5 text-gray-400">
+          <p className="text-sm leading-5 text-gray-400">
             &copy; {new Date().getFullYear()} Youth Trauma Initiative. All rights reserved. <br/>
             <span className="italic mt-2 block opacity-75">YTI is currently being established as a nonprofit organization.</span>
           </p>
@@ -139,3 +130,4 @@ export default function Footer() {
     </footer>
   );
 }
+

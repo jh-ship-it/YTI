@@ -1,89 +1,57 @@
+import { useRef, useState, type FormEvent } from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowUpRight, CheckCircle2, LoaderCircle } from 'lucide-react';
 import SEO from '../components/SEO';
-import FadeIn from '../components/FadeIn';
-import { ShieldAlert } from 'lucide-react';
 import PageHero from '../components/PageHero';
 
 export default function Contact() {
-  return (
-    <div className="bg-background pb-24 sm:pb-32">
-      <SEO
-        title="Contact Us"
-        description="Reach out to Youth Trauma Initiative for organizational partnerships, research collaborations, philanthropic support, and general inquiries."
-      />
-
-      <PageHero 
-        label="Connect With Us"
-        title="Start a conversation."
-        subtitle="Our team is ready to connect with clinicians, researchers, and philanthropic partners."
-        layout="text-only"
-      />
-
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-12 sm:mt-16">
-        <FadeIn className="mx-auto max-w-2xl space-y-8">
-          
-          {/* Urgent Crisis Notice */}
-          <div className="bg-rose-50 border-l-4 border-rose-600 p-5 text-rose-950 text-sm leading-relaxed">
-            <p className="font-bold text-rose-900 mb-1 flex items-center gap-2">
-              <ShieldAlert className="w-4 h-4 text-rose-600" />
-              Not For Clinical Emergencies or Crisis Response
-            </p>
-            <p className="text-rose-900 text-xs">
-              If you, a child, or someone you know is in immediate physical danger or experiencing an acute mental health crisis, please dial or text <strong>988</strong> (USA/Canada Suicide & Crisis Lifeline) or contact local emergency services immediately. YTI does not provide direct emergency psychiatric services.
-            </p>
-          </div>
-
-          <div className="bg-white border-t-4 border-secondary p-8 sm:p-12 shadow-sm">
-            <h3 className="text-2xl font-bold tracking-tight text-primary font-display mb-6">Directory</h3>
-            <p className="text-text-muted mb-8 leading-relaxed">
-              Youth Trauma Initiative is currently being established. While our integrated contact forms are being configured, please direct inquiries to the appropriate team via email.
-            </p>
-            
-            <div className="space-y-6">
-              <div className="border-b border-primary/10 pb-6">
-                 <h4 className="font-bold text-primary mb-1">Organization / Clinical Partnership Inquiry</h4>
-                 <p className="text-sm text-text-muted mb-3">For clinical settings, schools, or NGOs exploring subsidized access and implementation support.</p>
-                 <a href="mailto:partnerships@youthtraumainitiative.org" className="text-secondary font-bold hover:underline text-sm uppercase tracking-wide">partnerships@youthtraumainitiative.org</a>
-              </div>
-              
-              <div className="border-b border-primary/10 pb-6">
-                 <h4 className="font-bold text-primary mb-1">Research Collaboration Inquiry</h4>
-                 <p className="text-sm text-text-muted mb-3">For universities, researchers, and organizations exploring the YTI Data Initiative.</p>
-                 <a href="mailto:research@youthtraumainitiative.org" className="text-secondary font-bold hover:underline text-sm uppercase tracking-wide">research@youthtraumainitiative.org</a>
-              </div>
-              
-              <div className="border-b border-primary/10 pb-6">
-                 <h4 className="font-bold text-primary mb-1">Funder / Donor Interest</h4>
-                 <p className="text-sm text-text-muted mb-3">For foundations, philanthropists, and corporate partners.</p>
-                 <a href="mailto:giving@youthtraumainitiative.org" className="text-secondary font-bold hover:underline text-sm uppercase tracking-wide">giving@youthtraumainitiative.org</a>
-              </div>
-              
-              <div className="border-b border-primary/10 pb-6">
-                 <h4 className="font-bold text-primary mb-1">International Partnership Inquiry</h4>
-                 <p className="text-sm text-text-muted mb-3">For global NGOs, health ministries, and humanitarian responders.</p>
-                 <a href="mailto:global@youthtraumainitiative.org" className="text-secondary font-bold hover:underline text-sm uppercase tracking-wide">global@youthtraumainitiative.org</a>
-              </div>
-              
-              <div className="pb-2">
-                 <h4 className="font-bold text-primary mb-1">General Contact</h4>
-                 <p className="text-sm text-text-muted mb-3">For all other inquiries.</p>
-                 <a href="mailto:info@youthtraumainitiative.org" className="text-secondary font-bold hover:underline text-sm uppercase tracking-wide">info@youthtraumainitiative.org</a>
-              </div>
+  const [status, setStatus] = useState<'idle'|'saving'|'success'|'error'>('idle');
+  const [error, setError] = useState('');
+  const submissionId = useRef('');
+  async function submit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (status === 'saving') return;
+    const form = event.currentTarget;
+    const fields = Object.fromEntries(new FormData(form));
+    submissionId.current ||= crypto.randomUUID();
+    setStatus('saving'); setError('');
+    try {
+      const response = await fetch('/api/contact', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({...fields,id:submissionId.current})});
+      const result = await response.json();
+      if (!response.ok || result.ok !== true) throw new Error(result.error || 'Your message could not be saved. Please try again.');
+      setStatus('success'); form.reset(); submissionId.current = '';
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Please check your connection and try again. Your text is still here.');
+      setStatus('error');
+    }
+  }
+  const fieldClass = 'mt-2 w-full rounded-lg border border-primary/25 bg-white px-4 py-3 text-primary focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary disabled:opacity-60';
+  return <div className="pb-24">
+    <SEO title="Contact" description="Discuss clinical partnerships, research collaboration, and support for Youth Trauma Initiative."/>
+    <PageHero label="Connect with YTI" title="Start a conversation." subtitle="For child-serving organizations, researchers, and people who want to support the mission." layout="text-only"/>
+    <div className="mx-auto max-w-3xl px-6 space-y-8 mt-8">
+      <aside className="border-l-4 border-rose-700 bg-rose-50 p-6"><h2 className="font-bold text-lg mb-2">Crisis support</h2><p>YTI does not provide emergency or direct clinical services. In the U.S., call or text <a className="underline font-bold" href="tel:988">988</a> for the Suicide &amp; Crisis Lifeline. If someone is in immediate danger, call emergency services. Outside the U.S., use your local crisis or emergency service. This form is not a crisis service.</p></aside>
+      <section className="rounded-2xl border border-primary/15 bg-white p-6 sm:p-10 shadow-sm">
+        <p className="eyebrow">Organizational inquiries</p><h2 className="font-display text-3xl mb-4">Tell us what you have in mind.</h2>
+        <p className="text-text-muted mb-6">Share a question, an idea for collaboration, or your interest in supporting YTI. Fields marked * are required.</p>
+        <aside id="privacy-warning" className="border-l-4 border-secondary bg-sky/40 p-5 mb-8"><h3 className="font-bold mb-1">Protect children's privacy</h3><p className="text-sm leading-relaxed">Do not include patient names, identifying details, protected health information (PHI), or confidential clinical records.</p></aside>
+        {status === 'success' ? <div role="status" className="rounded-xl bg-secondary/10 p-6"><CheckCircle2 className="text-secondary mb-3" size={30}/><h3 className="font-display text-2xl mb-2">Your message has been received.</h3><p className="text-text-muted">Thank you for reaching out to YTI. Your inquiry has been saved for review.</p><button type="button" onClick={()=>setStatus('idle')} className="mt-5 font-semibold text-primary underline underline-offset-4">Send another inquiry</button></div> :
+        <form onSubmit={submit} aria-describedby="privacy-warning" className="space-y-6">
+          <fieldset disabled={status === 'saving'} className="space-y-6">
+            <div className="grid gap-6 sm:grid-cols-2">
+              <label className="block font-semibold">Name *<input name="name" autoComplete="name" required maxLength={120} className={fieldClass}/></label>
+              <label className="block font-semibold">Email *<input name="email" type="email" autoComplete="email" required maxLength={254} className={fieldClass}/></label>
             </div>
-
-            <div className="bg-primary/5 p-5 mt-10 flex gap-4 items-start border-l-4 border-secondary">
-              <ShieldAlert className="w-6 h-6 text-secondary shrink-0 mt-0.5" />
-              <div className="space-y-1">
-                 <p className="text-sm text-primary font-bold">
-                   Please do not submit patient-identifying or confidential clinical information via email.
-                 </p>
-                 <p className="text-sm text-text-muted">
-                   These public email addresses are not secure channels for Protected Health Information (PHI).
-                 </p>
-              </div>
-            </div>
-          </div>
-        </FadeIn>
-      </div>
+            <label className="block font-semibold">Organization <span className="font-normal text-text-muted">(optional)</span><input name="organization" autoComplete="organization" maxLength={180} className={fieldClass}/></label>
+            <label className="block font-semibold">What would you like to discuss? *<select name="topic" required defaultValue="" className={fieldClass}><option value="" disabled>Select an inquiry type</option>{['Clinical partnership','Research collaboration','International programs','Supporting YTI','General inquiry','Privacy request'].map(topic=><option key={topic}>{topic}</option>)}</select></label>
+            <label className="block font-semibold">Message *<textarea name="message" required maxLength={4000} rows={6} className={fieldClass} aria-describedby="message-hint"/><span id="message-hint" className="mt-2 block text-sm font-normal text-text-muted">Up to 4,000 characters. Please keep your message free of confidential health information.</span></label>
+            <div hidden aria-hidden="true"><label>Website<input name="website" tabIndex={-1} autoComplete="off"/></label></div>
+            <p className="text-sm text-text-muted">We store the information you submit to review and respond to your inquiry. Read our <Link to="/privacy" className="underline underline-offset-4 text-primary">Privacy Policy</Link>.</p>
+            {error && <p role="alert" className="rounded-lg bg-rose-50 p-4 text-rose-900">{error}</p>}
+            <button type="submit" className="button-primary inline-flex items-center gap-3 disabled:opacity-60" disabled={status === 'saving'}>{status === 'saving' ? <><LoaderCircle size={18} className="animate-spin motion-reduce:animate-none"/>Sending…</> : <>Send inquiry<ArrowUpRight size={18}/></>}</button>
+          </fieldset>
+        </form>}
+      </section>
     </div>
-  );
+  </div>;
 }

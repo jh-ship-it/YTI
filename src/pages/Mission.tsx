@@ -10,7 +10,7 @@ export default function Mission() {
       <PageHero 
         label="Our Mission"
         title="Closing the gap in trauma care."
-        subtitle="Youth Trauma Initiative helps children around the world receive better trauma and PTSD care by expanding access to the tools, training, data, and research clinicians need."
+        subtitle={siteConfig.mission}
         layout="text-only"
       />
 
@@ -18,7 +18,7 @@ export default function Mission() {
         <div className="mx-auto max-w-3xl space-y-16">
           <div
           >
-            <h2 className="text-2xl font-bold tracking-tight text-primary font-display">Our Mission</h2>
+            <h2 className="text-2xl font-bold tracking-tight text-primary font-display">Purpose in practice</h2>
             <p className="mt-6 text-lg leading-8 text-text-muted">
               Youth Trauma Initiative exists to expand clinical access globally to the evidence-based tools and supporting resources clinicians and child-serving systems need to properly identify, assess, diagnose, monitor, and treat trauma and post-traumatic stress disorder in children and adolescents.
             </p>
@@ -39,7 +39,7 @@ export default function Mission() {
             <p className="mt-6 text-lg leading-8 text-text-muted">
               YTI is a mission-first, vendor-neutral nonprofit organization focused on improving childhood-trauma care worldwide. We work to support:
             </p>
-            <ul className="mt-8 space-y-4 text-lg text-text-muted list-none">
+            <ul className="mission-actions mt-8 text-text-muted list-none">
               {[
                 'Funding or subsidized access to evidence-based trauma screening, assessment, diagnostic-support, treatment-planning, monitoring, and outcomes tools.',
                 'Training and implementation support for clinicians and organizations.',
@@ -50,7 +50,7 @@ export default function Mission() {
               ].map((item, index) => (
                 <li 
                   key={index}
-                  className="flex gap-4 items-start"
+                  className="reading-panel flex gap-4 items-start"
                 >
                   <div className="w-2 h-2 rounded-full bg-secondary mt-2.5 shrink-0"></div>
                   <span>{item}</span>
@@ -63,3 +63,4 @@ export default function Mission() {
     </div>
   );
 }
+
