@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "clean": "rm -rf dist server.js",
     "lint": "eslint src && tsc --noEmit",
-    "build:site": "node scripts/build-site.mjs"
+    "build:site": "node scripts/build-site.mjs",
+    "build:github": "npm run build:site"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.14",

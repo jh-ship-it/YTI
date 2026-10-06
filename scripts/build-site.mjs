@@ -1,8 +1,9 @@
 import { build as viteBuild } from 'vite';
 import { build } from 'esbuild';
-import { readdir, readFile, rm } from 'node:fs/promises';
+import { cp, readdir, readFile, rm } from 'node:fs/promises';
 await rm('dist',{recursive:true,force:true});
 await viteBuild({build:{outDir:'dist/client'}});
+await cp('dist/client/index.html', 'dist/client/404.html');
 const types = {'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg','.svg':'image/svg+xml','.ico':'image/x-icon','.txt':'text/plain','.xml':'application/xml','.webp':'image/webp','.json':'application/json'};
 const assets = {};
 async function scan(dir, prefix='') {

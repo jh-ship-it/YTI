@@ -4,6 +4,8 @@ import { ArrowUpRight, CheckCircle2, LoaderCircle } from 'lucide-react';
 import SEO from '../components/SEO';
 import PageHero from '../components/PageHero';
 
+const CONTACT_ENDPOINT = 'https://youth-trauma-initiative.jhowell.chatgpt.site/api/contact';
+
 export default function Contact() {
   const [status, setStatus] = useState<'idle'|'saving'|'success'|'error'>('idle');
   const [error, setError] = useState('');
@@ -16,7 +18,7 @@ export default function Contact() {
     submissionId.current ||= crypto.randomUUID();
     setStatus('saving'); setError('');
     try {
-      const response = await fetch('/api/contact', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({...fields,id:submissionId.current})});
+      const response = await fetch(CONTACT_ENDPOINT, {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({...fields,id:submissionId.current})});
       const result = await response.json();
       if (!response.ok || result.ok !== true) throw new Error(result.error || 'Your message could not be saved. Please try again.');
       setStatus('success'); form.reset(); submissionId.current = '';
