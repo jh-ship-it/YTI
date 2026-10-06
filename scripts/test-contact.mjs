@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { contact } from '../worker/contact.js';
 import worker from '../dist/server/index.js';
 const payload = {id:'11111111-1111-4111-8111-111111111111',name:'Form check',email:'test@example.org',organization:'',topic:'General inquiry',message:'Test inquiry',website:''};
-const request = (body=payload,origin='https://example.org') => new Request('https://example.org/api/contact',{method:'POST',headers:{Origin:origin,'Content-Type':'application/json'},body:JSON.stringify(body)});
+const request = (body=payload,origin='https://youth-trauma-initiative.jhowell.chatgpt.site') => new Request('https://example.org/api/contact',{method:'POST',headers:{Origin:origin,'Content-Type':'application/json'},body:JSON.stringify(body)});
 let saved;
 const DB = {prepare(sql){assert.match(sql,/INSERT INTO inquiries/);return {bind(...values){saved=values;return {run:async()=>({success:true})}}}}};
 assert.equal((await contact(request(),{DB})).status,201);
