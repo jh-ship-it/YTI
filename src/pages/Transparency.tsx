@@ -1,6 +1,7 @@
 import SEO from '../components/SEO';
 import FadeIn from '../components/FadeIn';
 import PageHero from '../components/PageHero';
+import { Link } from 'react-router-dom';
 
 export default function Transparency() {
   return (
@@ -21,7 +22,7 @@ export default function Transparency() {
         <FadeIn as="section">
           <h2 className="text-2xl font-display font-bold text-primary mb-4">Mission & Governance</h2>
           <p className="text-text-muted leading-relaxed">
-            Youth Trauma Initiative (YTI) is being structured with a singular focus: expanding access to effective pediatric trauma care. Our governance structure is designed to ensure our programs, funding, and research initiatives remain independent, mission-driven, and clinically rigorous. 
+            YTI is being structured to expand access to effective pediatric trauma care. Its governance framework is being developed to support independent, mission-driven decisions and responsible stewardship as programs and research initiatives take shape.
           </p>
         </FadeIn>
 
@@ -49,7 +50,7 @@ export default function Transparency() {
         <FadeIn as="section">
           <h2 className="text-2xl font-display font-bold text-primary mb-4">Future Reporting</h2>
           <p className="text-text-muted leading-relaxed">
-            As programs launch, YTI will publish annual reports, board information, and financial documents as they become available. This will include IRS Form 990-series filings once filed, and links to ProPublica Nonprofit Explorer and Candid/GuideStar profiles once available.
+            YTI currently publishes its board officers on the <Link to="/about#leadership" className="text-link">About & Leadership page</Link>. As the organization advances, it intends to publish annual reports and financial documents as they become available, including IRS Form 990-series filings once filed, and links to ProPublica Nonprofit Explorer and Candid/GuideStar profiles once available.
           </p>
         </FadeIn>
       </div>

@@ -1,85 +1,81 @@
+import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import FadeIn from '../components/FadeIn';
-import { siteConfig } from '../content';
 import PageHero from '../components/PageHero';
+
+const directors = [
+  { name: 'Jeffery Yard', role: 'President' },
+  { name: 'Jonathan Howell', role: 'Secretary' },
+  { name: 'Kipling Macartney', role: 'Treasurer' },
+];
 
 export default function About() {
   return (
     <div className="bg-background pb-24 sm:pb-32">
-      <SEO title="About" description="Learn about Youth Trauma Initiative's origins, our team, and our mission to move proven trauma-care knowledge and tools from research into real-world settings." />
-      <PageHero 
+      <SEO title="About & Leadership" description="Meet Youth Trauma Initiative's founding board officers and learn how YTI is being established." />
+      <PageHero
         label="About Youth Trauma Initiative"
-        title="Built to help close the gap between evidence and access."
-        subtitle="Youth Trauma Initiative is being developed to expand access to the clinical tools, knowledge, data, training, and implementation support needed to improve childhood-trauma care." layout="text-only"
+        title="A clearer path from evidence to care."
+        subtitle="YTI is being established to help children around the world receive trauma and PTSD care by equipping the people and systems around them."
+        layout="text-only"
       />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-12 sm:mt-16">
-        <div className="mx-auto max-w-3xl space-y-16">
-          
-          <FadeIn as="section" className="bg-white p-8 sm:p-12 border-t-4 border-secondary shadow-sm">
-            <h2 className="text-3xl font-bold tracking-tight text-primary font-display mb-6">Our Origins</h2>
-            <div className="space-y-6 text-lg text-text-muted leading-relaxed">
-              <p>
-                The Youth Trauma Initiative (YTI) grew out of a recognition that the science of treating childhood trauma has advanced significantly, but the delivery systems have struggled to keep pace. While researchers have developed effective, evidence-based methods for assessing and treating pediatric PTSD, these tools remain inaccessible to many frontline clinicians.
-              </p>
-              <p>
-                The barriers are varied: cost barriers for proprietary assessments, lack of translated instruments in global settings, limited training opportunities for non-specialist providers, and fragmented technological infrastructure.
-              </p>
-              <p>
-                YTI is being established to help translate proven trauma-care knowledge and validated tools from research into real-world settings, bridging the gap between academic clinical science and community-based practice.
-              </p>
+        <div className="mx-auto max-w-5xl space-y-16">
+          <FadeIn as="section" className="about-story">
+            <div className="about-story-copy">
+              <p className="eyebrow">Why YTI</p>
+              <h2 className="text-3xl font-display font-medium text-primary mb-6">Children need care that can reach them.</h2>
+              <div className="space-y-5 text-lg text-text-muted leading-relaxed">
+                <p>Knowledge about childhood trauma has grown, yet access to appropriate assessment, trained providers, and sustained support remains uneven. Cost, language, workforce capacity, and fragmented systems can all create barriers.</p>
+                <p>Youth Trauma Initiative is being structured to help close those gaps. Our planned work centers on validated tools, practical training, responsible data and research, and implementation support for clinicians and child-serving organizations.</p>
+              </div>
+            </div>
+            <div className="about-story-note">
+              <span className="about-note-mark" aria-hidden="true">YTI</span>
+              <p>Child-centered. Clinically grounded. Vendor-neutral.</p>
+              <Link to="/transparency" className="text-link">How we approach accountability</Link>
             </div>
           </FadeIn>
 
-          {/* Strategic Pillars */}
-          <FadeIn as="section">
-            <h2 className="text-2xl font-bold tracking-tight text-primary font-display mb-6">Strategic Pillars</h2>
-            <div className="grid sm:grid-cols-2 gap-6">
-              <div className="bg-white p-6 border border-primary/10 space-y-2">
-                <h3 className="font-bold font-display text-primary text-lg">1. Clinical Access & Implementation</h3>
-                <p className="text-sm text-text-muted leading-relaxed">
-                  Lowering direct licensing and adoption costs for high-quality, validated trauma assessments so community clinics aren't forced to rely on informal screening.
-                </p>
-              </div>
-              <div className="bg-white p-6 border border-primary/10 space-y-2">
-                <h3 className="font-bold font-display text-primary text-lg">2. Education & Awareness</h3>
-                <p className="text-sm text-text-muted leading-relaxed">
-                  Helping communities recognize trauma earlier by supporting public education and awareness intended to improve recognition of childhood trauma and PTSD.
-                </p>
-              </div>
-              <div className="bg-white p-6 border border-primary/10 space-y-2">
-                <h3 className="font-bold font-display text-primary text-lg">3. Multi-Site Open Data</h3>
-                <p className="text-sm text-text-muted leading-relaxed">
-                  Building privacy-first, ethically governed infrastructure through the Youth Trauma Data Initiative to track longitudinal recovery and identify what interventions work best.
-                </p>
-              </div>
-              <div className="bg-white p-6 border border-primary/10 space-y-2">
-                <h3 className="font-bold font-display text-primary text-lg">4. Global Capacity Building</h3>
-                <p className="text-sm text-text-muted leading-relaxed">
-                  Expanding trauma-care capacity where resources are limited, working with qualified local partners and accounting for local cultural contexts.
-                </p>
-              </div>
+          <FadeIn as="section" className="about-pillars">
+            <div className="section-heading">
+              <div><p className="eyebrow">Our focus</p><h2>Practical support at every step.</h2></div>
+              <p>YTI’s planned initiatives connect evidence, frontline practice, and learning across care settings.</p>
+            </div>
+            <div className="about-focus-grid">
+              <article><span>01</span><h3>Clinical access</h3><p>Support access to validated assessment tools and help organizations put them into practice.</p></article>
+              <article><span>02</span><h3>Training & education</h3><p>Build knowledge among clinicians and child-serving professionals who support children and families.</p></article>
+              <article><span>03</span><h3>Research & learning</h3><p>Encourage responsible measurement and research that can inform care and implementation.</p></article>
+              <article><span>04</span><h3>Global capacity</h3><p>Explore locally informed approaches to language, training, and implementation with qualified partners.</p></article>
             </div>
           </FadeIn>
 
-          <FadeIn as="section">
-            <h2 className="text-2xl font-bold tracking-tight text-primary font-display mb-6">Leadership & Governance</h2>
-            <p className="text-text-muted mb-8 leading-relaxed text-lg">
-              Youth Trauma Initiative is currently in its developmental phase. We are actively assembling a board of directors and a clinical advisory council composed of recognized experts in pediatric trauma, implementation science, public health, and nonprofit governance.
-            </p>
-            <p className="text-text-muted mb-8 leading-relaxed text-lg">
-              Our founding team brings together expertise across clinical science, technology development, and philanthropy.
-            </p>
-            <div className="border border-primary/10 bg-white p-6">
-              <p className="text-sm text-text-muted font-medium">
-                Official titles, institutional affiliations, and formal governance roles will be published upon the final completion of our organizational formation and tax-exempt filing processes.
-              </p>
+          <FadeIn as="section" className="leadership-section">
+            <span id="leadership" className="reading-anchor" />
+            <div className="section-heading">
+              <div><p className="eyebrow">People & governance</p><h2>Meet YTI’s founding officers.</h2></div>
+              <p>YTI publishes its current board leadership as the organization takes shape. Additional organizational and financial reporting will be added as it becomes available.</p>
             </div>
+            <div className="leader-grid">
+              {directors.map((person, index) => (
+                <article className="leader-card" key={person.name}>
+                  <div className={`leader-monogram leader-monogram-${index + 1}`} aria-hidden="true">{person.name.split(' ').map((part) => part[0]).join('')}</div>
+                  <div><h3>{person.name}</h3><p>{person.role} · Board of Directors</p></div>
+                </article>
+              ))}
+            </div>
+            <div className="leadership-note"><p>These are governance roles, not clinical endorsements. YTI is being established as an independent, vendor-neutral nonprofit organization.</p><Link to="/transparency" className="text-link">Read about governance and safeguards</Link></div>
           </FadeIn>
 
+          <FadeIn as="section" className="about-next-step">
+            <p className="eyebrow">Continue exploring</p>
+            <h2>Help shape a more connected path to care.</h2>
+            <p>We welcome conversations with clinicians, child-serving organizations, researchers, and supporters who share this purpose.</p>
+            <div className="button-row"><Link className="button-primary" to="/contact">Start a conversation</Link><Link className="button-outline" to="/mission">Read our mission</Link></div>
+          </FadeIn>
         </div>
       </div>
     </div>
   );
 }
-
