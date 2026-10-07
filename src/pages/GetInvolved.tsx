@@ -36,7 +36,7 @@ export default function GetInvolved() {
                 </div>
                 <p className="text-text-muted mb-6 leading-relaxed">Foundations and other prospective supporters can learn about YTI’s planned areas of work and discuss possible future support.</p>
                 
-                <Link to="/contact" className="inline-flex items-center gap-2 text-sm font-bold tracking-wide text-primary hover:text-secondary uppercase transition-colors group">
+                <Link to="/contact?topic=Supporting%20YTI" className="inline-flex items-center gap-2 text-sm font-bold tracking-wide text-primary hover:text-secondary uppercase transition-colors group">
                   Discuss future support
                 </Link>
               </div>

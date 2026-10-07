@@ -1,5 +1,5 @@
 import { useRef, useState, type FormEvent } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { ArrowUpRight, CheckCircle2, LoaderCircle } from 'lucide-react';
 import SEO from '../components/SEO';
 import PageHero from '../components/PageHero';
@@ -45,7 +45,7 @@ export default function Contact() {
               <label className="block font-semibold">Email *<input name="email" type="email" autoComplete="email" required maxLength={254} className={fieldClass}/></label>
             </div>
             <label className="block font-semibold">Organization <span className="font-normal text-text-muted">(optional)</span><input name="organization" autoComplete="organization" maxLength={180} className={fieldClass}/></label>
-            <label className="block font-semibold">What would you like to discuss? *<select name="topic" required defaultValue="" className={fieldClass}><option value="" disabled>Select an inquiry type</option>{['Clinical partnership','Research collaboration','International programs','Supporting YTI','General inquiry','Privacy request'].map(topic=><option key={topic}>{topic}</option>)}</select></label>
+            <label className="block font-semibold">What would you like to discuss? *<select name="topic" required defaultValue={initialTopic} className={fieldClass}><option value="" disabled>Select an inquiry type</option>{topics.map(topic=><option key={topic}>{topic}</option>)}</select></label>
             <label className="block font-semibold">Message *<textarea name="message" required maxLength={4000} rows={6} className={fieldClass} aria-describedby="message-hint"/><span id="message-hint" className="mt-2 block text-sm font-normal text-text-muted">Up to 4,000 characters. Please keep your message free of confidential health information.</span></label>
             <div hidden aria-hidden="true"><label>Website<input name="website" tabIndex={-1} autoComplete="off"/></label></div>
             <p className="text-sm text-text-muted">We store the information you submit to review and respond to your inquiry. Read our <Link to="/privacy" className="underline underline-offset-4 text-primary">Privacy Policy</Link>.</p>

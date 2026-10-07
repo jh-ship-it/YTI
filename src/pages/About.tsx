@@ -51,11 +51,36 @@ export default function About() {
             </div>
           </FadeIn>
 
+          <FadeIn as="section" className="border-y border-primary/10 py-12 sm:py-16">
+            <div className="section-heading">
+              <div><p className="eyebrow">One mission, across settings</p><h2>Local care. National reach. Global purpose.</h2></div>
+              <p>YTI is being established with a worldwide mission. Future work may support child-serving systems at different geographic scales as partnerships and resources develop.</p>
+            </div>
+            <div className="grid gap-4 md:grid-cols-3">
+              <article className="rounded-2xl bg-white p-6 sm:p-8 shadow-sm border border-primary/10">
+                <span className="text-sm font-bold tracking-[0.18em] text-secondary uppercase">Regional</span>
+                <h3 className="mt-3 font-display text-2xl text-primary">Close to the community</h3>
+                <p className="mt-3 text-text-muted">Potential support for local clinics, schools, hospitals, and the people children see every day.</p>
+              </article>
+              <article className="rounded-2xl bg-sky/45 p-6 sm:p-8 border border-primary/10">
+                <span className="text-sm font-bold tracking-[0.18em] text-secondary uppercase">National</span>
+                <h3 className="mt-3 font-display text-2xl text-primary">Across the United States</h3>
+                <p className="mt-3 text-text-muted">Potential collaboration with child-serving organizations and systems across the country.</p>
+              </article>
+              <article className="rounded-2xl bg-white p-6 sm:p-8 shadow-sm border border-primary/10">
+                <span className="text-sm font-bold tracking-[0.18em] text-secondary uppercase">International</span>
+                <h3 className="mt-3 font-display text-2xl text-primary">Around the world</h3>
+                <p className="mt-3 text-text-muted">Potential partnerships shaped by local expertise, language, clinical standards, and child safeguarding.</p>
+              </article>
+            </div>
+            <p className="mt-5 text-sm text-text-muted">These describe YTI’s intended scope, not active programs, established partnerships, or current geographic coverage.</p>
+          </FadeIn>
+
           <FadeIn as="section" className="leadership-section">
             <span id="leadership" className="reading-anchor" />
             <div className="section-heading">
               <div><p className="eyebrow">People & governance</p><h2>Meet YTI’s founding officers.</h2></div>
-              <p>YTI publishes its current board leadership as the organization takes shape. Additional organizational and financial reporting will be added as it becomes available.</p>
+              <p>YTI publishes its current founding board officers and explains the Board’s oversight role. Additional organizational and financial reporting will be added as it becomes available.</p>
             </div>
             <div className="leader-grid">
               {directors.map((person, index) => (
@@ -65,7 +90,7 @@ export default function About() {
                 </article>
               ))}
             </div>
-            <div className="leadership-note"><p>These are governance roles, not clinical endorsements. YTI is being established as an independent, vendor-neutral nonprofit organization.</p><Link to="/transparency" className="text-link">Read about governance and safeguards</Link></div>
+            <div className="leadership-note"><p>The Board provides organizational oversight and stewardship. These are governance roles, not clinical endorsements. YTI is being established as an independent, vendor-neutral nonprofit organization.</p><Link to="/transparency" className="text-link">Read about governance and safeguards</Link></div>
           </FadeIn>
 
           <FadeIn as="section" className="about-next-step">
