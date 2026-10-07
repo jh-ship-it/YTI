@@ -24,13 +24,13 @@ export default function ReadingExperience() {
       entries.forEach(e => {if(e.isIntersecting) setActive(e.target.id);});
     }, { rootMargin: '-15% 0px -65% 0px' });
     if (navigable) headings.forEach(h => headingObserver.observe(h));
-    const elements = [...root.querySelectorAll('.mission-opening h1, .opening-bottom, .home-intro, .section-heading, .pillar, .need-grid, .flow-step, .data-grid, .closing-section, .reading-panel')];
+    const elements = [...root.querySelectorAll('.mission-opening h1, .hero-visual, .better-callout-inner, .section-heading, .pillar, .pathway-card, .need-grid, .flow-step, .data-grid, .leader-card, .leadership-preview-inner, .closing-section, .reading-panel')];
     const observer = new IntersectionObserver(entries => entries.forEach(e => {
       if(e.isIntersecting){ e.target.classList.add('is-visible'); observer.unobserve(e.target); }
     }), {threshold: .08});
     if(!reduced) elements.forEach((el,i) => {
       el.classList.add('scroll-reveal');
-      (el as HTMLElement).style.setProperty('--reveal-delay', `${el.matches('.pillar,.flow-step') ? (i % 4)*65 : 0}ms`);
+      (el as HTMLElement).style.setProperty('--reveal-delay', `${el.matches('.pillar,.pathway-card,.flow-step,.leader-card') ? (i % 4)*75 : 0}ms`);
       observer.observe(el);
     });
     return () => {observer.disconnect();headingObserver.disconnect();elements.forEach(el=>el.classList.remove('scroll-reveal','is-visible'));};

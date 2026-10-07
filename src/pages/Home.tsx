@@ -21,26 +21,29 @@ export default function Home() {
   return <>
     <SEO title="Brighter Tomorrows for Braver Kids" description={siteConfig.mission} />
 
-    <section className="mission-opening">
-      <div className="site-width">
-        <p className="eyebrow">Our purpose</p>
-        <h1>{siteConfig.mission}</h1>
-        <div className="opening-bottom"><p>{siteConfig.tagline}</p><Link className="text-link" to="/mission">Explore our mission</Link></div>
+    <section className="mission-opening home-hero">
+      <div className="site-width home-hero-grid">
+        <div className="home-hero-copy">
+          <p className="eyebrow">Youth Trauma Initiative</p>
+          <h1>{siteConfig.mission}</h1>
+          <p className="hero-tagline">{siteConfig.tagline}</p>
+          <div className="hero-actions"><Link className="button-primary" to="/programs">See what we’re building <span aria-hidden="true">→</span></Link><Link className="hero-text-link" to="/mission">Our mission</Link></div>
+        </div>
+        <figure className="hero-visual">
+          <div className="hero-image-wrap"><img src="/images/child-and-caregiver.jpg" alt="A mother and daughter drawing together at home." loading="eager" fetchPriority="high"/>
+            <svg className="hero-landscape-lines" viewBox="0 0 600 580" fill="none" aria-hidden="true"><path d="M-20 395C85 343 126 455 224 398C317 344 340 214 463 240C519 252 549 292 620 279"/><path d="M-18 431C79 387 129 487 233 433C325 386 372 282 474 300C543 312 566 338 618 328"/><path d="M-12 468C86 429 143 519 251 469C340 428 399 347 489 362C544 371 579 394 619 389"/><path className="hero-path" d="M156 580C179 502 254 492 279 439C309 378 247 338 274 281C296 234 373 213 392 161C402 134 394 105 378 81"/></svg>
+          </div>
+          <figcaption><span className="hero-caption-kicker">Connection creates room for healing</span><span className="hero-caption-tag">Child · Family · Care team</span></figcaption>
+        </figure>
+        <div className="hero-orbit hero-orbit-one" aria-hidden="true"/><div className="hero-orbit hero-orbit-two" aria-hidden="true"/>
       </div>
     </section>
 
-    <section className="home-intro site-width">
-      <div className="intro-copy">
-        <p className="eyebrow">A path toward healing</p>
-        <h2>Better Tools<br/><span>Better data.</span><br/>Better trauma care for children.</h2>
-        <p>Trauma can follow a child into the classroom, the home, and the moments that should feel safe. The people helping that child need the resources to recognize what is happening—and respond.</p>
-        <p>YTI is being established to equip frontline clinicians, schools, and hospitals with validated tools, training, data, and implementation support.</p>
-        <div className="button-row"><Link className="button-primary" to="/programs">Explore our work</Link><Link className="button-outline" to="/get-involved">Get involved</Link></div>
+    <section className="better-callout">
+      <div className="site-width better-callout-inner">
+        <div><p className="eyebrow">A clear north star</p><h2>Better Tools.<br/><span>Better data.</span><br/>Better trauma care for children.</h2></div>
+        <div className="better-callout-copy"><p>Childhood trauma can reach into the home, the classroom, and the moments that should feel safe. The people helping children need tools and training to recognize what is happening—and support to put knowledge into practice.</p><Link className="text-link" to="/programs">Explore YTI’s planned work <span aria-hidden="true">→</span></Link></div>
       </div>
-      <figure className="intro-visual">
-        <img src="/images/child-and-caregiver.jpg" alt="A mother and daughter drawing together at home."/>
-        <figcaption><span>A moment to connect</span><br/><em>Room to heal and grow</em></figcaption>
-      </figure>
     </section>
 
     <section className="pillars-section">
