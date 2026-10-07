@@ -112,3 +112,34 @@
 .about-next-step>p:not(.eyebrow) { max-width:620px; margin:18px auto; color:#475569; }.about-next-step .button-row { justify-content:center; }
 @media(max-width:850px) { .leadership-preview-inner { grid-template-columns:1fr 1fr; gap:20px; }.leadership-preview-inner>a { grid-column:1/-1; }.about-story { grid-template-columns:1fr; gap:28px; }.about-focus-grid { grid-template-columns:repeat(2,1fr); }.about-focus-grid article:nth-child(2) { border-right:0; }.about-focus-grid article:nth-child(-n+2) { border-bottom:1px solid #0f3b5b20; }.about-focus-grid article:nth-child(3) { padding-left:0; }.leader-grid { grid-template-columns:1fr; } }
 @media(max-width:600px) { .leadership-preview-inner { grid-template-columns:1fr; }.leadership-preview-inner>a { grid-column:auto; }.about-focus-grid { grid-template-columns:1fr; }.about-focus-grid article,.about-focus-grid article:first-child,.about-focus-grid article:nth-child(3) { padding:20px 0; border-right:0; border-bottom:1px solid #0f3b5b20; }.about-focus-grid article:last-child { border-bottom:0; }.leadership-note { align-items:flex-start; flex-direction:column; }.about-next-step { padding:28px 20px; } }
+
+/* More visual hierarchy on the home page, with the child and care pathway kept central. */
+.pillars-section { background:#f1f6f6; padding-block:88px; }
+.pillar-grid { border:0; gap:16px; }
+.pillar { min-height:290px; padding:28px; background:#fff; border:1px solid #0f3b5b12; border-top:4px solid #249d8f; box-shadow:0 8px 24px #0f3b5b08; }
+.pillar:first-child { padding-left:28px; }.pillar:last-child { border-right:1px solid #0f3b5b12; }
+.pillar-learning { border-top-color:#e2b04f; }.pillar-research { border-top-color:#4f8ca8; }.pillar-global { border-top-color:#9bbdba; }
+.pillar:hover { background:#fff; box-shadow:0 16px 34px #0f3b5b14; transform:translateY(-4px); }
+.pillar-top { align-items:flex-start; margin-bottom:22px; }
+.pillar-icon { display:grid; place-items:center; width:52px; height:52px; border-radius:50%; background:#e4f2ef; color:#147b70; }
+.pillar-learning .pillar-icon { background:#fbf2df; color:#876418; }.pillar-research .pillar-icon { background:#e8f1f6; color:#356f87; }.pillar-global .pillar-icon { background:#e9f0ee; color:#477871; }
+.pillar h3 { font-size:1.25rem; line-height:1.35; margin-bottom:12px; }
+.pillar p { font-size:.9375rem; line-height:1.65; }
+.pillar-link { display:flex; justify-content:space-between; padding-top:22px; }
+.pathway-section { padding:80px 0 88px; background:#fff; }
+.pathway-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+.pathway-card { position:relative; min-height:238px; padding:26px 28px 30px; background:#f7f9fa; border:1px solid #0f3b5b13; border-radius:4px 36px 4px 4px; }
+.pathway-card:nth-child(2) { background:#e8f3f0; border-color:#249d8f30; }
+.pathway-card:nth-child(3) { background:#edf4f8; }
+.pathway-card-top { display:flex; align-items:center; justify-content:space-between; margin-bottom:26px; }
+.pathway-icon { display:grid; place-items:center; width:44px; height:44px; color:#147b70; background:white; border-radius:50%; }
+.pathway-number { color:#96a5ad; font:500 1.5rem Lora,serif; }
+.pathway-label { margin-bottom:8px; color:#147b70; font-size:.75rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; }
+.pathway-card h3 { margin-bottom:10px; font-size:1.35rem; line-height:1.3; font-weight:500; }
+.pathway-card>p:last-child { color:#475569; font-size:.9375rem; line-height:1.65; }
+.need-stat a { color:#fff; }
+.intro-visual { min-height:510px; border-radius:148px 8px 8px 8px; }
+.intro-visual figcaption span { font:600 .75rem/1.4 Inter,sans-serif; text-transform:uppercase; letter-spacing:.14em; color:#d6f2ec; }
+@media(max-width:1000px) { .pillar-grid { grid-template-columns:repeat(2,1fr); }.pillar:nth-child(2) { border-right:1px solid #0f3b5b12; }.pillar:nth-child(3) { padding-left:28px; }.pillar:nth-child(-n+2) { border-bottom:1px solid #0f3b5b12; }.pathway-grid { grid-template-columns:1fr; }.pathway-card { min-height:0; } }
+@media(max-width:700px) { .pillars-section,.pathway-section { padding-block:52px; }.pillar-grid { grid-template-columns:1fr; gap:12px; }.pillar,.pillar:first-child,.pillar:nth-child(3) { min-height:0; padding:22px; border-right:1px solid #0f3b5b12; }.pillar:nth-child(-n+2) { border-bottom:1px solid #0f3b5b12; }.pillar-top { margin-bottom:14px; }.pillar-link { padding-top:16px; }.intro-visual { min-height:370px; } }
+@media(hover:hover) { .pillar { transition:transform .22s ease,box-shadow .22s ease,background .22s ease; } }
