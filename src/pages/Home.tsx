@@ -68,14 +68,21 @@ export default function Home() {
           <p>YTI’s model starts with the needs children face, supports the people positioned to help, and makes room to learn from care.</p>
         </div>
         <div className="pathway-grid">
-          {pathway.map(({icon:Icon,label,title,text},index)=><article className="pathway-card" key={label}>
-            <FadeIn delay={index*.1}>
-              <div className="pathway-card-top"><span className="pathway-icon"><Icon size={22}/></span><span className="pathway-number">0{index+1}</span></div>
-              <p className="pathway-label">{label}</p><h3>{title}</h3><p>{text}</p>
-            </FadeIn>
-          </article>)}
+          <figure className="pathway-feature-visual"><img src="https://images.unsplash.com/photo-1758691462119-792279713969?auto=format&fit=crop&q=82&w=1500" alt="A pediatrician speaks with a mother and her child during an appointment." loading="lazy"/><figcaption>Care is a conversation.</figcaption></figure>
+          <div className="pathway-cards">
+            {pathway.map(({icon:Icon,label,title,text},index)=><article className="pathway-card" key={label}>
+              <FadeIn delay={index*.1}>
+                <div className="pathway-card-top"><span className="pathway-icon"><Icon size={22}/></span><span className="pathway-number">0{index+1}</span></div>
+                <p className="pathway-label">{label}</p><h3>{title}</h3><p>{text}</p>
+              </FadeIn>
+            </article>)}
+          </div>
         </div>
       </div>
+    </section>
+
+    <section className="home-photo-story site-width" aria-label="Children playing together">
+      <figure><img src="https://images.unsplash.com/photo-1627764940620-90393d0e8c34?auto=format&fit=crop&q=82&w=1800" alt="Children hold hands and play in a circle on a sunny field." loading="lazy"/><figcaption><span className="eyebrow">The reason behind the work</span><strong>Care starts with the whole child.</strong><span>At home. In school. In the community.</span></figcaption></figure>
     </section>
 
     <section className="need-section">
