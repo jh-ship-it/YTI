@@ -30,7 +30,7 @@ export default function Home() {
           <div className="hero-actions"><Link className="button-primary" to="/programs">See what we’re building <span aria-hidden="true">→</span></Link><Link className="hero-text-link" to="/mission">Our mission</Link></div>
         </div>
         <figure className="hero-visual">
-          <div className="hero-image-wrap"><img src="/images/child-and-caregiver.jpg" alt="A mother and daughter drawing together at home." loading="eager" fetchPriority="high"/>
+          <div className="hero-image-wrap"><img src="https://images.unsplash.com/photo-1774641373770-a4c33a2651ab?auto=format&fit=crop&q=82&w=1500" alt="A caregiver and young child share a playful moment on a playground." loading="eager" fetchPriority="high"/>
             <svg className="hero-landscape-lines" viewBox="0 0 600 580" fill="none" aria-hidden="true"><path d="M-20 395C85 343 126 455 224 398C317 344 340 214 463 240C519 252 549 292 620 279"/><path d="M-18 431C79 387 129 487 233 433C325 386 372 282 474 300C543 312 566 338 618 328"/><path d="M-12 468C86 429 143 519 251 469C340 428 399 347 489 362C544 371 579 394 619 389"/><path className="hero-path" d="M156 580C179 502 254 492 279 439C309 378 247 338 274 281C296 234 373 213 392 161C402 134 394 105 378 81"/></svg>
           </div>
           <figcaption><span className="hero-caption-kicker">Connection creates room for healing</span><span className="hero-caption-tag">Child · Family · Care team</span></figcaption>
@@ -81,7 +81,8 @@ export default function Home() {
     <section className="need-section">
       <div className="site-width need-grid">
         <div className="need-stat"><span>More than</span><strong>2/3</strong><p>of children report at least one traumatic event by age 16.</p><a href="https://www.samhsa.gov/child-trauma/understanding-child-trauma" target="_blank" rel="noopener noreferrer">Read the SAMHSA source <span aria-hidden="true">↗</span></a></div>
-        <div><p className="eyebrow">The need</p><h2>Recognition is the start.<br/>Access makes action possible.</h2><p>A child's recovery should not be limited by the resources of the organization caring for them. Cost, language, workforce shortages, and fragmented systems can leave clinicians without the tools and support they need.</p><p>Exposure does not by itself mean a child has PTSD. Appropriate assessment helps qualified professionals understand symptoms, plan care, and track progress.</p></div>
+        <div className="need-copy"><p className="eyebrow">The need</p><h2>Recognition is the start.<br/>Access makes action possible.</h2><p>A child's recovery should not be limited by the resources of the organization caring for them. Cost, language, workforce shortages, and fragmented systems can leave clinicians without the tools and support they need.</p><p>Exposure does not by itself mean a child has PTSD. Appropriate assessment helps qualified professionals understand symptoms, plan care, and track progress.</p></div>
+        <figure className="need-visual"><img src="/images/child-and-caregiver.jpg" alt="A caregiver and child draw together at a table." loading="lazy"/><figcaption>Support starts with connection.</figcaption></figure>
       </div>
     </section>
 
