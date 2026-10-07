@@ -16,6 +16,15 @@ export default function GetInvolved() {
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-12 sm:mt-16">
         <div className="mx-auto max-w-5xl space-y-16">
+
+          <FadeIn as="section" className="involvement-path">
+            <div className="involvement-path-heading"><p className="eyebrow">A practical first step</p><h2>Start with a conversation.</h2></div>
+            <div className="involvement-path-steps" aria-label="How to explore getting involved">
+              <article><span>01</span><div><h3>Share what matters to you</h3><p>Tell us about your interests or expertise.</p></div></article>
+              <article><span>02</span><div><h3>Find a point of connection</h3><p>Explore shared priorities and safeguards.</p></div></article>
+              <article><span>03</span><div><h3>Discuss a possible next step</h3><p>Support, partnership, research, or service.</p></div></article>
+            </div>
+          </FadeIn>
           
           <FadeIn as="section">
             <h2 className="text-3xl font-bold text-primary font-display mb-8">Funding & Philanthropy</h2>

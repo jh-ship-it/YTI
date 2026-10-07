@@ -4,12 +4,16 @@ export default function PageHero({
   title, 
   subtitle, 
   imageUrl,
+  imageAlt = "",
+  imageCaption,
   label,
   layout = "split"
 }: { 
   title: string; 
   subtitle?: string; 
   imageUrl?: string;
+  imageAlt?: string;
+  imageCaption?: string;
   label?: string;
   layout?: "split" | "centered-image" | "text-only";
 }) {
@@ -56,8 +60,11 @@ export default function PageHero({
               </p>
             )}
           </FadeIn>
-          <FadeIn delay={0.2} className="relative h-64 sm:h-96 lg:h-[500px] w-full rounded-3xl overflow-hidden shadow-2xl ring-1 ring-primary/5">
-            <img src={imageUrl} alt="" className="absolute inset-0 h-full w-full object-cover" />
+          <FadeIn delay={0.2} className="page-hero-visual-motion">
+            <figure className="page-hero-visual page-hero-visual-centered">
+              <img src={imageUrl} alt={imageAlt} />
+              {imageCaption && <figcaption>{imageCaption}</figcaption>}
+            </figure>
           </FadeIn>
         </div>
       </section>
@@ -83,8 +90,11 @@ export default function PageHero({
               </p>
             )}
           </FadeIn>
-          <FadeIn delay={0.2} className="relative h-64 sm:h-80 lg:h-96 w-full rounded-3xl overflow-hidden shadow-xl ring-1 ring-primary/5">
-            <img src={imageUrl} alt="" className="absolute inset-0 h-full w-full object-cover" />
+          <FadeIn delay={0.2} className="page-hero-visual-motion">
+            <figure className="page-hero-visual">
+              <img src={imageUrl} alt={imageAlt} />
+              {imageCaption && <figcaption>{imageCaption}</figcaption>}
+            </figure>
           </FadeIn>
         </div>
       </div>

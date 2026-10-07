@@ -1,7 +1,7 @@
 import SEO from '../components/SEO';
 import FadeIn from '../components/FadeIn';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Building2, Stethoscope, CheckCircle2 } from 'lucide-react';
+import { Building2, Stethoscope, CheckCircle2 } from 'lucide-react';
 import PageHero from '../components/PageHero';
 
 export default function Clinicians() {
@@ -12,7 +12,10 @@ export default function Clinicians() {
         label="For Organizations"
         title="Strengthen trauma assessment and measurement-based care."
         subtitle="YTI aims to work with eligible organizations facing financial, implementation, language, geographic, technology, or capacity barriers to measurement-based care."
-        layout="text-only"
+        imageUrl="https://images.unsplash.com/photo-1758691462119-792279713969?auto=format&fit=crop&q=82&w=1500"
+        imageAlt="A pediatrician speaks with a mother and child during an appointment."
+        imageCaption="Illustrative stock photo · care is a conversation"
+        layout="split"
       />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-12 sm:mt-16">

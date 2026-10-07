@@ -1,22 +1,32 @@
 import SEO from '../components/SEO';
 import FadeIn from '../components/FadeIn';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Globe, ShieldCheck } from 'lucide-react';
+import { Globe } from 'lucide-react';
 import PageHero from '../components/PageHero';
 
 export default function GlobalAccess() {
   return (
     <div className="bg-background pb-24 sm:pb-32">
-      <SEO title="Global Access" description="YTI works to make validated trauma-care resources more accessible and usable across diverse settings, overcoming cost, language, and licensing barriers." />
+      <SEO title="Global Access" description="Learn how YTI is planning for locally informed, responsible access to child trauma-care resources across diverse settings." />
       <PageHero 
         label="Global Access"
         title="Evidence-based trauma care should not stop at a border."
-        subtitle="The mission of YTI is global. We work to reduce financial, geographic, language, technology, and capacity barriers to evidence-based childhood trauma care."
+        subtitle="YTI's international work is still being planned. Any programs may be developed with local context, clinical standards, language, and child safeguarding in view."
         layout="text-only"
       />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-12 sm:mt-16">
         <div className="mx-auto max-w-3xl space-y-16">
+
+          <FadeIn as="section" className="global-pathway">
+            <p className="eyebrow">A locally informed path</p>
+            <div className="global-pathway-steps" aria-label="Potential international planning sequence">
+              <article><span>01</span><h2>Understand the setting</h2><p>Language, resources, and care systems.</p></article>
+              <article><span>02</span><h2>Plan with local partners</h2><p>Qualified expertise and shared priorities.</p></article>
+              <article><span>03</span><h2>Adapt with care</h2><p>Clinical practice, privacy, and safeguarding.</p></article>
+            </div>
+            <p className="global-pathway-note">A planning framework, not a list of active international programs or partners.</p>
+          </FadeIn>
           
           <FadeIn as="section">
             <h2 className="text-sm font-bold tracking-[0.2em] text-secondary uppercase mb-6">Our Thesis</h2>
@@ -28,7 +38,7 @@ export default function GlobalAccess() {
                 In many settings, cost, language, licensing, workforce, implementation, and infrastructure barriers can limit access to validated trauma resources.
               </p>
               <p className="text-lg text-text-muted leading-relaxed">
-                YTI works to make evidence-based trauma resources more accessible, affordable, and usable across diverse settings. YTI intends to work with local organizations, health ministries, and humanitarian responders to subsidize access, support accurate cultural translation, and build localized clinical capacity.
+                YTI may explore ways to make evidence-based trauma resources more accessible and usable across diverse settings. Any future international programs may be developed with qualified local partners and appropriate attention to applicable requirements.
               </p>
             </div>
           </FadeIn>
@@ -70,7 +80,7 @@ export default function GlobalAccess() {
           <FadeIn as="section" className="text-center mt-16 pt-16 border-t border-primary/10">
             <h3 className="text-xl font-bold text-primary font-display mb-4">Partner with us globally</h3>
             <p className="text-text-muted mb-8 max-w-xl mx-auto">
-              We are actively looking for international partners to help expand access to evidence-based care in underserved regions.
+              As YTI's planning develops, conversations can help identify locally informed approaches to access and implementation.
             </p>
             <Link
               to="/contact"

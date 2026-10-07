@@ -2,12 +2,12 @@ import SEO from '../components/SEO';
 import FadeIn from '../components/FadeIn';
 import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero';
-import { ArrowRight } from 'lucide-react';
+
 
 export default function Programs() {
   return (
     <div className="bg-background pb-24 sm:pb-32">
-      <SEO title="Our Work" description="Explore YTI's four core program areas: Clinical Capacity, Global Access, The Data Initiative, and Research, all designed to improve pediatric trauma care." />
+      <SEO title="Our Work" description="Explore Youth Trauma Initiative's planned areas of work in clinical access, education, research, data, and global capacity." />
       <PageHero 
         label="Our Work"
         title="Expanding access and improving care globally."
@@ -23,7 +23,7 @@ export default function Programs() {
             <h2 className="text-3xl font-bold text-primary font-display mb-4">Clinical Access & Implementation</h2>
             <p className="text-xl font-semibold text-primary mb-6">Put evidence-based trauma tools within reach.</p>
             <p className="text-lg text-text-muted leading-relaxed mb-8">
-              YTI works to reduce financial, geographic, linguistic, technological, and institutional barriers that keep clinicians and child-serving organizations from using appropriate trauma and PTSD resources.
+              YTI is being established to help reduce financial, geographic, linguistic, technological, and institutional barriers that can keep clinicians and child-serving organizations from using appropriate trauma and PTSD resources.
             </p>
             <details className="program-details"><summary>Explore planned activities<span aria-hidden="true">+</span></summary><ul className="space-y-4 text-text-muted">
               <li className="flex gap-4 border-b border-primary/10 pb-4">
@@ -44,27 +44,15 @@ export default function Programs() {
               </li>
             </ul></details>
             <Link to="/contact" className="inline-flex items-center gap-2 text-sm font-bold tracking-wide text-primary hover:text-secondary uppercase transition-colors group">
-              Request Implementation Support 
+              Discuss Possible Implementation Support
             </Link>
           </div>
-          <div className="bg-accent aspect-square sm:aspect-[4/3] p-8 flex items-center justify-center border border-primary/10">
-             <div className="text-center space-y-4 max-w-sm">
-                <div className="w-16 h-1 bg-secondary mx-auto mb-8"></div>
-                <h3 className="font-display text-2xl text-primary font-bold">Scaling Care</h3>
-                <p className="text-text-muted">By subsidizing access to proprietary and hard-to-access tools, we equip front-line providers with the tools and implementation support they need.</p>
-             </div>
-          </div>
+          <figure className="program-visual"><img src="https://images.unsplash.com/photo-1758691462119-792279713969?auto=format&fit=crop&q=82&w=1400" alt="A pediatrician talks with a mother and child during an appointment." loading="lazy"/><figcaption>Clinical access begins with a conversation.</figcaption></figure>
         </FadeIn>
 
         {/* Program 2 */}
         <FadeIn as="section" className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
-          <div className="order-2 lg:order-1 bg-primary text-white p-12 sm:p-16 h-full flex flex-col justify-center">
-             <div className="text-center space-y-4 max-w-sm mx-auto">
-                <div className="w-16 h-1 bg-sun mx-auto mb-8"></div>
-                <h3 className="font-display text-2xl font-bold text-white">Shaping Understanding</h3>
-                <p className="text-gray-300">Public awareness campaigns shift the conversation from behavioral issues to trauma-informed responses.</p>
-             </div>
-          </div>
+          <figure className="program-visual order-2 lg:order-1"><img src="https://images.unsplash.com/photo-1627764940620-90393d0e8c34?auto=format&fit=crop&q=82&w=1400" alt="Children hold hands and play in a circle on a sunny field." loading="lazy"/><figcaption>Learning happens across the places children grow.</figcaption></figure>
           <div className="order-1 lg:order-2">
             <p className="text-sm font-bold tracking-[0.2em] text-secondary uppercase mb-4">Program Area 02</p>
             <h2 className="text-3xl font-bold text-primary font-display mb-4">Public Education & Awareness</h2>
@@ -103,7 +91,7 @@ export default function Programs() {
             <h2 className="text-3xl font-bold text-primary font-display mb-4">Research, Data & Outcomes</h2>
             <p className="text-xl font-semibold text-primary mb-6">Use measurement to guide care and understand recovery.</p>
             <p className="text-lg text-text-muted leading-relaxed mb-8">
-              YTI designs, funds, conducts, and supports implementation pilots, program evaluation, outcomes measurement, validation, and measurement-based care.
+              YTI's planned work may include implementation pilots, program evaluation, outcomes measurement, validation, and measurement-based care.
             </p>
             <details className="program-details"><summary>Explore planned activities<span aria-hidden="true">+</span></summary><ul className="space-y-4 text-text-muted">
               <li className="flex gap-4 border-b border-primary/10 pb-4">
@@ -127,27 +115,12 @@ export default function Programs() {
               Learn about the Data Initiative 
             </Link>
           </div>
-          <div className="border border-primary p-12">
-             <div className="space-y-6">
-                <h3 className="font-display text-2xl text-primary font-bold">The Data Initiative</h3>
-                <p className="text-text-muted">
-                  A major planned initiative aims to build the infrastructure necessary to aggregate and study multi-site trauma outcomes securely.
-                </p>
-                <div className="w-full h-px bg-primary/20"></div>
-                <p className="text-sm font-bold text-primary uppercase tracking-widest">Status: Planned</p>
-             </div>
-          </div>
+          <figure className="program-data-visual"><svg viewBox="0 0 600 420" role="img" aria-labelledby="program-data-title program-data-desc"><title id="program-data-title">Illustrative measurement pathway</title><desc id="program-data-desc">A simple abstract line graphic represents repeated measurement over time. It contains no real or projected data.</desc><path className="data-graphic-grid" d="M64 60H556M64 140H556M64 220H556M64 300H556M64 380H556M64 60V380M186 60V380M310 60V380M434 60V380M556 60V380"/><path className="data-graphic-line data-line-one" d="M64 310C126 290 140 212 200 230S282 303 340 200 420 177 460 134 515 146 556 98"/><path className="data-graphic-line data-line-two" d="M64 350C124 326 147 300 194 316S274 258 329 274 404 228 449 245 512 203 556 214"/><circle cx="556" cy="98" r="7"/><circle cx="556" cy="214" r="7"/></svg><figcaption>Illustrative only · no real or projected data</figcaption></figure>
         </FadeIn>
 
         {/* Program 4 */}
         <FadeIn as="section" className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
-          <div className="order-2 lg:order-1 bg-accent p-12 sm:p-16 h-full flex flex-col justify-center border border-primary/10">
-             <div className="text-center space-y-4 max-w-sm mx-auto">
-                <div className="w-16 h-1 bg-secondary mx-auto mb-8"></div>
-                <h3 className="font-display text-2xl text-primary font-bold">Capacity Where It Counts</h3>
-                <p className="text-text-muted">Addressing systemic barriers in low-resource environments worldwide, ensuring science doesn't stop at borders.</p>
-             </div>
-          </div>
+          <figure className="program-visual order-2 lg:order-1"><img src="/images/child-and-caregiver.jpg" alt="A caregiver and child draw together at a table." loading="lazy"/><figcaption>Support should fit the realities of everyday life.</figcaption></figure>
           <div className="order-1 lg:order-2">
             <p className="text-sm font-bold tracking-[0.2em] text-secondary uppercase mb-4">Program Area 04</p>
             <h2 className="text-3xl font-bold text-primary font-display mb-4">Global Capacity Building</h2>

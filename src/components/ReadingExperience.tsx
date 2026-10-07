@@ -24,7 +24,7 @@ export default function ReadingExperience() {
       entries.forEach(e => {if(e.isIntersecting) setActive(e.target.id);});
     }, { rootMargin: '-15% 0px -65% 0px' });
     if (navigable) headings.forEach(h => headingObserver.observe(h));
-    const elements = [...root.querySelectorAll('.mission-opening h1, .hero-visual, .better-callout-inner, .section-heading, .pillar, .pathway-card, .pathway-feature-visual, .home-photo-story, .need-grid, .need-visual, .flow-step, .data-grid, .leader-card, .leadership-preview-inner, .closing-section, .reading-panel')];
+    const elements = [...root.querySelectorAll('.mission-opening h1, .hero-visual, .better-callout-inner, .section-heading, .pillar, .pathway-card, .pathway-feature-visual, .home-photo-story, .need-grid, .need-visual, .flow-step, .data-grid, .leader-card, .leadership-preview-inner, .closing-section, .reading-panel, .program-visual, .program-data-visual, .global-pathway, .involvement-path')];
     const observer = new IntersectionObserver(entries => entries.forEach(e => {
       if(e.isIntersecting){ e.target.classList.add('is-visible'); observer.unobserve(e.target); }
     }), {threshold: .08});
