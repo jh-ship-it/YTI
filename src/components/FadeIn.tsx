@@ -33,8 +33,9 @@ export default function FadeIn({ children, delay = 0, className = "", direction 
 
   return (
     <Component
-      initial={reduced ? false : { opacity: 0, y: offset.y, x: offset.x }}
-      whileInView={{ opacity: 1, y: 0, x: 0 }}
+      // Keep content readable from the first paint; motion adds a small positional settle.
+      initial={reduced ? false : { y: offset.y, x: offset.x }}
+      whileInView={{ y: 0, x: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: reduced ? 0 : 0.55, delay: reduced ? 0 : delay, ease: [0.21, 0.47, 0.32, 0.98] }}
       className={className}
