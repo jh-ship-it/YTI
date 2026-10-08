@@ -3,6 +3,7 @@ import { ReactNode } from 'react';
 
 interface FadeInProps {
   children: ReactNode;
+  key?: string;
   delay?: number;
   className?: string;
   direction?: 'up' | 'down' | 'left' | 'right' | 'none';
