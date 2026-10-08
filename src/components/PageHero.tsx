@@ -19,15 +19,15 @@ export default function PageHero({
 }) {
   if (layout === "text-only" || !imageUrl) {
     return (
-      <section className="bg-background pt-16 pb-12 sm:pt-24 sm:pb-16 overflow-hidden">
+      <section className="page-hero page-hero--text bg-background pt-16 pb-12 sm:pt-24 sm:pb-16 overflow-hidden">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
-          <FadeIn className="max-w-3xl mx-auto">
+          <FadeIn className="page-hero-copy max-w-3xl mx-auto">
             {label && (
               <p className="text-sm font-bold tracking-widest text-secondary uppercase mb-4">
                 {label}
               </p>
             )}
-            <h1 className="text-4xl font-bold tracking-tight text-primary sm:text-5xl font-display">
+            <h1 className="page-hero-title text-4xl font-bold tracking-tight text-primary sm:text-5xl font-display">
               {title}
             </h1>
             {subtitle && (
@@ -43,15 +43,15 @@ export default function PageHero({
 
   if (layout === "centered-image") {
     return (
-      <section className="bg-background pt-16 pb-12 sm:pt-24 overflow-hidden">
+      <section className="page-hero page-hero--centered bg-background pt-16 pb-12 sm:pt-24 overflow-hidden">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
-          <FadeIn className="max-w-3xl mx-auto mb-12">
+          <FadeIn className="page-hero-copy max-w-3xl mx-auto mb-12">
             {label && (
               <p className="text-sm font-bold tracking-widest text-secondary uppercase mb-4">
                 {label}
               </p>
             )}
-            <h1 className="text-4xl font-bold tracking-tight text-primary sm:text-5xl font-display">
+            <h1 className="page-hero-title text-4xl font-bold tracking-tight text-primary sm:text-5xl font-display">
               {title}
             </h1>
             {subtitle && (
@@ -62,7 +62,7 @@ export default function PageHero({
           </FadeIn>
           <FadeIn delay={0.2} className="page-hero-visual-motion">
             <figure className="page-hero-visual page-hero-visual-centered">
-              <img src={imageUrl} alt={imageAlt} />
+              <img src={imageUrl} alt={imageAlt} decoding="async" fetchPriority="high" />
               {imageCaption && <figcaption>{imageCaption}</figcaption>}
             </figure>
           </FadeIn>
@@ -72,16 +72,16 @@ export default function PageHero({
   }
 
   return (
-    <section className="bg-background pt-16 pb-12 sm:pt-24 sm:pb-16 overflow-hidden">
+    <section className="page-hero page-hero--split bg-background pt-16 pb-12 sm:pt-24 sm:pb-16 overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center mx-auto">
-          <FadeIn>
+          <FadeIn className="page-hero-copy">
             {label && (
               <p className="text-sm font-bold tracking-widest text-secondary uppercase mb-4">
                 {label}
               </p>
             )}
-            <h1 className="text-4xl font-bold tracking-tight text-primary sm:text-5xl font-display">
+            <h1 className="page-hero-title text-4xl font-bold tracking-tight text-primary sm:text-5xl font-display">
               {title}
             </h1>
             {subtitle && (
@@ -92,7 +92,7 @@ export default function PageHero({
           </FadeIn>
           <FadeIn delay={0.2} className="page-hero-visual-motion">
             <figure className="page-hero-visual">
-              <img src={imageUrl} alt={imageAlt} />
+              <img src={imageUrl} alt={imageAlt} decoding="async" fetchPriority="high" />
               {imageCaption && <figcaption>{imageCaption}</figcaption>}
             </figure>
           </FadeIn>
