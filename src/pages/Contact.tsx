@@ -5,8 +5,12 @@ import SEO from '../components/SEO';
 import PageHero from '../components/PageHero';
 
 const CONTACT_ENDPOINT = 'https://youth-trauma-initiative.jhowell.chatgpt.site/api/contact';
+const topics = ['Clinical partnership','Research collaboration','International programs','Supporting YTI','General inquiry','Privacy request'];
 
 export default function Contact() {
+  const [searchParams] = useSearchParams();
+  const requestedTopic = searchParams.get('topic');
+  const initialTopic = requestedTopic && topics.includes(requestedTopic) ? requestedTopic : '';
   const [status, setStatus] = useState<'idle'|'saving'|'success'|'error'>('idle');
   const [error, setError] = useState('');
   const submissionId = useRef('');
