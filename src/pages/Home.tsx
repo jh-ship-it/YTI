@@ -109,7 +109,7 @@ export default function Home() {
           <img src="/images/child-and-caregiver.jpg" width="1800" height="1200" alt="A school-age child draws with a supportive adult in a warm, focused moment." loading="lazy" />
         </picture>
       </figure>
-      <FadeIn className="vision-band-copy" direction="left">
+      <FadeIn className="vision-band-copy">
         <p className="eyebrow">A future worth working toward</p>
         <h2>More understanding.<br/>More support.<br/><span>More possibility.</span></h2>
         <p>Our vision is a world where a child’s experience of trauma does not define their future.</p>
