@@ -39,14 +39,16 @@ export default function Home() {
       <div className="site-width home-hero-grid">
         <div className="home-hero-copy">
           <p className="eyebrow">Youth Trauma Initiative</p>
-          <h1>Helping children<br className="desktop-break"/> around the world.</h1>
-          <p className="hero-tagline">Working toward a future where more children and teens affected by trauma can access the understanding, support, and care they deserve.</p>
+          <h1>Trauma care,<br className="desktop-break"/> within reach for every child.</h1>
+          <p className="hero-tagline">YTI is working to bring the tools, training, and support that strengthen trauma care to the people helping children around the world.</p>
           <div className="hero-actions">
             <Link className="button-primary" to="/mission">Our mission <span aria-hidden="true">→</span></Link>
             <Link className="hero-text-link" to="/get-involved">Get involved</Link>
           </div>
         </div>
         <figure className="hero-visual">
+          <span className="hero-orbit hero-orbit-one" aria-hidden="true" />
+          <span className="hero-orbit hero-orbit-two" aria-hidden="true" />
           <div className="hero-image-wrap">
             <img
               src="https://images.pexels.com/photos/8457815/pexels-photo-8457815.jpeg?auto=compress&cs=tinysrgb&w=1200"
@@ -70,25 +72,25 @@ export default function Home() {
         <h2>Every child deserves the chance to heal and thrive.</h2>
         <p>Traumatic experiences can affect how young people feel, learn, and connect. YTI is being established to help clinicians and child-serving systems access the understanding, tools, training, research, and implementation support they need.</p>
       </FadeIn>
-      <div className="mission-statement-card">
+      <FadeIn className="mission-statement-card" direction="left" delay={0.12}>
         <p className="eyebrow">Our mission</p>
         <p>{siteConfig.mission}</p>
-      </div>
+      </FadeIn>
     </section>
 
     <section className="approach-section">
       <div className="site-width">
         <div className="section-heading">
-          <div><p className="eyebrow">How we hope to make a difference</p><h2>Support the people around every child.</h2></div>
-          <p>YTI is being established. These are the ways we intend to help care, knowledge, and connection reach young people.</p>
+          <FadeIn><p className="eyebrow">How we hope to make a difference</p><h2>Support the people around every child.</h2></FadeIn>
+          <FadeIn direction="left" delay={0.12}><p>YTI is being established. These are the ways we intend to help care, knowledge, and connection reach young people.</p></FadeIn>
         </div>
         <div className="approach-grid">
-          {approaches.map(({ icon: Icon, number, title, text, href, link }) => <article className="approach-card" key={number}>
+          {approaches.map(({ icon: Icon, number, title, text, href, link }, index) => <FadeIn as="article" className="approach-card" key={number} delay={index * 0.12}>
             <div className="approach-card-top"><span className="approach-icon"><Icon size={23} strokeWidth={1.7} aria-hidden="true" /></span><span>{number}</span></div>
             <h3>{title}</h3>
             <p>{text}</p>
             <Link className="text-link" to={href}>{link}<span aria-hidden="true"> →</span></Link>
-          </article>)}
+          </FadeIn>)}
         </div>
       </div>
     </section>
@@ -96,7 +98,7 @@ export default function Home() {
     <section className="need-section">
       <div className="site-width need-grid">
         <div className="need-stat"><span>More than</span><strong>2/3</strong><p>of children report at least one traumatic event by age 16.</p><a href="https://www.samhsa.gov/child-trauma/understanding-child-trauma" target="_blank" rel="noopener noreferrer">Read the SAMHSA source <span aria-hidden="true">↗</span></a></div>
-        <div className="need-copy"><p className="eyebrow">The need</p><h2>Understanding can open a path to support.</h2><p>Children and teens deserve care shaped around their needs. Yet cost, language, workforce capacity, and fragmented systems can make it harder for the people helping them to find appropriate resources.</p><p>Exposure to a traumatic event does not by itself mean a child has PTSD. Qualified professionals determine what support may be appropriate.</p></div>
+        <FadeIn className="need-copy" direction="left"><p className="eyebrow">The need</p><h2>Understanding can open a path to support.</h2><p>Children and teens deserve care shaped around their needs. Yet cost, language, workforce capacity, and fragmented systems can make it harder for the people helping them to find appropriate resources.</p><p>Exposure to a traumatic event does not by itself mean a child has PTSD. Qualified professionals determine what support may be appropriate.</p></FadeIn>
       </div>
     </section>
 
@@ -107,15 +109,15 @@ export default function Home() {
           <img src="/images/child-and-caregiver.jpg" width="1800" height="1200" alt="A school-age child draws with a supportive adult in a warm, focused moment." loading="lazy" />
         </picture>
       </figure>
-      <div className="vision-band-copy">
+      <FadeIn className="vision-band-copy" direction="left">
         <p className="eyebrow">A future worth working toward</p>
         <h2>More understanding.<br/>More support.<br/><span>More possibility.</span></h2>
         <p>Our vision is a world where a child’s experience of trauma does not define their future.</p>
-      </div>
+      </FadeIn>
     </section>
 
     <section className="site-width support-section">
-      <div><p className="eyebrow">Be part of the work</p><h2>Help shape a more hopeful future for young people.</h2><p>Connect with YTI about the mission, future partnerships, research, or ways to support the organization as it takes shape.</p></div>
+      <FadeIn><p className="eyebrow">Be part of the work</p><h2>Help shape a more hopeful future for young people.</h2><p>Connect with YTI about the mission, future partnerships, research, or ways to support the organization as it takes shape.</p></FadeIn>
       <div className="support-actions"><Link className="button-primary" to="/get-involved">Get involved <span aria-hidden="true">→</span></Link><Link className="button-outline" to="/about">About YTI</Link></div>
       <p className="support-stage-note">YTI is being established. Online donations are not currently being accepted.</p>
     </section>
